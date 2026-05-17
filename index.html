@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>AquaRythu — Run Your Shrimp Farm With Intelligence</title>
+  <meta name="description" content="AI-powered operating system for shrimp farms. Smart feeding, FCR intelligence, profit tracking, growth analytics — all in one app built for Indian farmers." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;480;500;580;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════ NAV ═══════════════════════ -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo" aria-label="AquaRythu home">
+        <span class="logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 14c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0c1.5-1.5 3-1.5 3-1.5" />
+            <path d="M3 19c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0c1.5-1.5 3-1.5 3-1.5" />
+          </svg>
+        </span>
+        AquaRythu
+      </a>
+
+      <div class="nav-links">
+        <a href="#preview">Product</a>
+        <a href="#smart-feed">Smart Feed</a>
+        <a href="#features">Features</a>
+        <a href="#trust">Farmers</a>
+        <a href="#how">How it works</a>
+      </div>
+
+      <div class="nav-cta">
+        <button class="btn btn-ghost btn-sm menu-btn" id="menu-btn" aria-label="Menu" style="padding:8px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" style="display:none; padding: 12px 20px 18px; border-top: 1px solid var(--line-100); background: white; flex-direction: column; gap: 4px;">
+      <a href="#preview" style="padding: 12px 8px; font-size: 16px; font-weight: 480; color: var(--ink-700);">Product</a>
+      <a href="#smart-feed" style="padding: 12px 8px; font-size: 16px; font-weight: 480; color: var(--ink-700);">Smart Feed</a>
+      <a href="#features" style="padding: 12px 8px; font-size: 16px; font-weight: 480; color: var(--ink-700);">Features</a>
+      <a href="#trust" style="padding: 12px 8px; font-size: 16px; font-weight: 480; color: var(--ink-700);">Farmers</a>
+      <a href="#how" style="padding: 12px 8px; font-size: 16px; font-weight: 480; color: var(--ink-700);">How it works</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══════════════════════ HERO ═══════════════════════ -->
+    <section id="top" style="padding-top: 64px; padding-bottom: 100px; position: relative; overflow: hidden;">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <svg preserveAspectRatio="none" viewBox="0 0 1200 800">
+          <defs>
+            <linearGradient id="ripple" x1="0" x2="1">
+              <stop offset="0" stop-color="#00B7C2" stop-opacity="0"/>
+              <stop offset=".5" stop-color="#00B7C2" stop-opacity=".18"/>
+              <stop offset="1" stop-color="#00B7C2" stop-opacity="0"/>
+            </linearGradient>
+          </defs>
+          <path d="M 0 500 Q 300 480, 600 500 T 1200 500" stroke="url(#ripple)" stroke-width="1" fill="none"/>
+          <path d="M 0 522 Q 300 502, 600 522 T 1200 522" stroke="url(#ripple)" stroke-width="1" fill="none"/>
+          <path d="M 0 544 Q 300 524, 600 544 T 1200 544" stroke="url(#ripple)" stroke-width="1" fill="none"/>
+          <path d="M 0 566 Q 300 546, 600 566 T 1200 566" stroke="url(#ripple)" stroke-width="1" fill="none"/>
+          <path d="M 0 588 Q 300 568, 600 588 T 1200 588" stroke="url(#ripple)" stroke-width="1" fill="none"/>
+        </svg>
+      </div>
+
+      <div class="container hero-grid" style="position: relative;">
+        <div class="hero-copy">
+          <span class="pill" style="margin-bottom: 22px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v4M12 17v4M5 12H1M23 12h-4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg>
+            New · AI Smart Feed Engine v2
+          </span>
+
+          <h1 class="h-display" id="hero-headline">
+            Run your shrimp farm with
+            <span class="serif-accent" style="color: var(--aqua-600);">intelligence.</span>
+          </h1>
+
+          <p class="lead hero-lead">
+            Track feed, profits, FCR, growth, inventory and pond performance — all in one intelligent platform built for Indian shrimp farmers.
+          </p>
+
+          <div class="hero-cta">
+            <button class="btn btn-primary btn-lg" data-open="apk">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+              Download APK
+              <span style="opacity: .6; font-size: 12px; margin-left: 4px;">· 18 MB</span>
+            </button>
+          </div>
+
+        </div>
+
+        <!-- ─── Hero product visual ─── -->
+        <div class="hero-visual">
+          <div class="hv-main">
+            <div class="hv-main-head">
+              <div class="hv-main-head-l">
+                <span class="hv-main-mark">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 3v4M12 17v4M5 12H1M23 12h-4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg>
+                </span>
+                <div>
+                  <div class="hv-main-eyebrow">Today · Smart feed plan</div>
+                  <div class="hv-main-sub">Pond B-3 · DOC 47</div>
+                </div>
+              </div>
+              <span class="pill green" style="font-size: 11.5px;">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+                Optimal
+              </span>
+            </div>
+
+            <div class="hv-main-num-row">
+              <span class="hv-main-num metric">108</span>
+              <span class="hv-main-unit">kg / day</span>
+              <span class="hv-main-delta">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+                +6.4%
+              </span>
+            </div>
+            <div class="hv-main-note">Recommended for 2,40,000 shrimp · ABW 14.2 g</div>
+
+            <div class="hv-bars">
+              <span style="height: 24px;"></span>
+              <span style="height: 32px;"></span>
+              <span style="height: 28px;"></span>
+              <span style="height: 40px;"></span>
+              <span style="height: 36px;"></span>
+              <span style="height: 48px;"></span>
+              <span style="height: 44px;"></span>
+              <span style="height: 56px;"></span>
+              <span class="on" style="height: 52px;"></span>
+              <span class="on" style="height: 64px;"></span>
+              <span class="on" style="height: 60px;"></span>
+              <span class="on" style="height: 72px;"></span>
+            </div>
+            <div class="hv-bars-labels"><span>Mon</span><span>Wed</span><span>Fri</span><span>Sun</span></div>
+
+            <div class="hv-actions">
+              <button class="hv-action active">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+                Accept plan
+              </button>
+              <button class="hv-action">Adjust</button>
+            </div>
+          </div>
+
+          <!-- FCR chip -->
+          <div class="hv-chip hv-chip-fcr">
+            <div class="hv-chip-row">
+              <span class="hv-chip-mark">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 17V11M10 17V7M14 17v-4M18 17V9"/></svg>
+              </span>
+              <div>
+                <div class="hv-chip-eyebrow">FCR</div>
+                <div class="hv-chip-num metric">1.18</div>
+              </div>
+            </div>
+            <div class="hv-chip-bar"><i></i></div>
+            <div class="hv-chip-foot">Industry avg 1.45 · You save 18%</div>
+          </div>
+
+          <!-- Profit chip -->
+          <div class="hv-chip hv-chip-profit">
+            <div class="hv-chip-eyebrow">Profit · this crop</div>
+            <div class="hv-chip-profit-num metric">₹ 4,82,640</div>
+            <div class="hv-chip-profit-delta">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+              +₹ 38k vs forecast
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ LIVE APP PREVIEW ═══════════════════════ -->
+    <section id="preview" style="padding-top: 40px;">
+      <div class="container">
+        <div class="section-intro center">
+          <span class="eyebrow">The product</span>
+          <h2 class="h-section">
+            One app. Every decision on your farm,
+            <span class="serif-accent" style="color: var(--aqua-600);">backed by data.</span>
+          </h2>
+          <p class="lead" style="text-align: center; margin: 0 auto;">
+            Built for your phone first. Designed to be glanceable from the pond bund.
+          </p>
+        </div>
+
+        <div class="preview-shell">
+          <!-- tabs -->
+          <div class="preview-tabs" role="tablist">
+            <button class="preview-tab active" data-screen="dashboard" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5M3 18l9 5 9-5"/></svg>
+              Dashboard
+            </button>
+            <button class="preview-tab" data-screen="feed" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v4M12 17v4M5 12H1M23 12h-4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg>
+              Smart Feed
+            </button>
+            <button class="preview-tab" data-screen="profit" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 5h10M7 9h10M7 5c4 0 6 2 6 4s-2 4-6 4h-1l7 6"/></svg>
+              Profit
+            </button>
+            <button class="preview-tab" data-screen="growth" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+              Growth
+            </button>
+            <button class="preview-tab" data-screen="inventory" role="tab">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 12l9 4 9-4M3 17l9 4 9-4"/></svg>
+              Inventory
+            </button>
+          </div>
+
+          <!-- stage -->
+          <div class="preview-stage">
+            <div class="preview-bg"></div>
+            <div class="phone-wrap">
+              <div class="phone">
+                <div class="phone-notch"></div>
+                <div class="phone-screen" id="phone-screen">
+                  <!-- screens injected by JS -->
+                </div>
+              </div>
+            </div>
+            <div id="preview-floaters"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ PROBLEM → SOLUTION ═══════════════════════ -->
+    <section id="problem" class="bg-cream">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow">Why AquaRythu</span>
+          <h2 class="h-section">
+            The shrimp business is brutal.
+            <span class="serif-accent" style="color: var(--aqua-600);">We make it winnable.</span>
+          </h2>
+          <p class="lead">
+            Four problems quietly drain Indian shrimp farms. AquaRythu fixes each one with data the farmer can actually act on.
+          </p>
+        </div>
+
+        <div class="ps-grid" id="ps-grid"><!-- cards injected --></div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ FEATURES ═══════════════════════ -->
+    <section id="features">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow">What's inside</span>
+          <h2 class="h-section">
+            Ten things every shrimp farmer needs,
+            <span class="serif-accent" style="color: var(--aqua-600);">in one app.</span>
+          </h2>
+          <p class="lead">
+            We don't ship a fancy dashboard. We ship an operating system — every workflow on a working farm, connected and intelligent.
+          </p>
+        </div>
+
+        <div class="feat-grid" id="feat-grid"><!-- cards injected --></div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ SMART FEED ENGINE ═══════════════════════ -->
+    <section id="smart-feed" class="bg-ocean" style="position: relative; overflow: hidden;">
+      <div class="sf-glow" aria-hidden="true"></div>
+
+      <div class="container" style="position: relative; z-index: 1;">
+        <div class="section-intro" style="color: white;">
+          <span class="eyebrow sf-intro-eyebrow">The engine</span>
+          <h2 class="h-section sf-intro-h">
+            Smart Feed Engine,
+            <span class="serif-accent" style="color: var(--aqua-300);">working while you sleep.</span>
+          </h2>
+          <p class="lead sf-intro-lead">
+            Tray response. Day of culture. Sampling weight. Feeding history. Weather. The engine reads them all and tells you exactly how much to feed — and when to ease off.
+          </p>
+        </div>
+
+        <div class="sf-grid">
+          <div class="sf-col sf-inputs">
+            <div class="sf-label">Inputs</div>
+            <div class="sf-input" data-pulse="0">
+              <span class="sf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v6L4 19a2 2 0 0 0 2 3h12a2 2 0 0 0 2-3l-5-10V3"/><path d="M8 3h8"/><path d="M7 14h10"/></svg>
+              </span>
+              <div class="sf-input-text">
+                <div class="sf-input-label">Tray observation</div>
+                <div class="sf-input-val">84% consumed</div>
+              </div>
+            </div>
+            <div class="sf-input" data-pulse="1">
+              <span class="sf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 16V11a6 6 0 1 0-12 0v5l-2 2h16l-2-2z"/><path d="M10 21h4"/></svg>
+              </span>
+              <div class="sf-input-text">
+                <div class="sf-input-label">Day of culture</div>
+                <div class="sf-input-val">DOC 47</div>
+              </div>
+            </div>
+            <div class="sf-input" data-pulse="2">
+              <span class="sf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+              </span>
+              <div class="sf-input-text">
+                <div class="sf-input-label">Sampling weight</div>
+                <div class="sf-input-val">ABW 14.2 g</div>
+              </div>
+            </div>
+            <div class="sf-input" data-pulse="3">
+              <span class="sf-input-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"/><path d="M6 17V11M10 17V7M14 17v-4M18 17V9"/></svg>
+              </span>
+              <div class="sf-input-text">
+                <div class="sf-input-label">Feed history</div>
+                <div class="sf-input-val">last 7 days</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- engine -->
+          <div class="sf-engine">
+            <svg viewBox="0 0 160 200" width="100%" height="200">
+              <defs>
+                <linearGradient id="conn" x1="0" x2="1">
+                  <stop offset="0" stop-color="#7ee0e6" stop-opacity="0"/>
+                  <stop offset=".5" stop-color="#7ee0e6" stop-opacity=".7"/>
+                  <stop offset="1" stop-color="#7ee0e6" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <line x1="0" y1="20" x2="60" y2="100" stroke="rgba(126,224,230,.25)" stroke-width="1"/>
+              <line x1="0" y1="60" x2="60" y2="100" stroke="rgba(126,224,230,.25)" stroke-width="1"/>
+              <line x1="0" y1="100" x2="60" y2="100" stroke="rgba(126,224,230,.25)" stroke-width="1"/>
+              <line x1="0" y1="140" x2="60" y2="100" stroke="rgba(126,224,230,.25)" stroke-width="1"/>
+              <line x1="100" y1="100" x2="160" y2="60" stroke="rgba(126,224,230,.25)" stroke-width="1"/>
+              <line x1="100" y1="100" x2="160" y2="100" stroke="rgba(126,224,230,.25)" stroke-width="1"/>
+              <line x1="100" y1="100" x2="160" y2="140" stroke="rgba(126,224,230,.25)" stroke-width="1"/>
+
+              <circle r="2.5" fill="#7ee0e6">
+                <animateMotion dur="2.4s" repeatCount="indefinite" begin="0s" path="M0,20 L60,100"/>
+              </circle>
+              <circle r="2.5" fill="#7ee0e6">
+                <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.4s" path="M0,60 L60,100"/>
+              </circle>
+              <circle r="2.5" fill="#7ee0e6">
+                <animateMotion dur="2.4s" repeatCount="indefinite" begin="0.8s" path="M0,100 L60,100"/>
+              </circle>
+              <circle r="2.5" fill="#7ee0e6">
+                <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s" path="M0,140 L60,100"/>
+              </circle>
+              <circle r="2.5" fill="#7ee0e6">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="1s" path="M100,100 L160,60"/>
+              </circle>
+              <circle r="2.5" fill="#7ee0e6">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="1.3s" path="M100,100 L160,100"/>
+              </circle>
+              <circle r="2.5" fill="#7ee0e6">
+                <animateMotion dur="2s" repeatCount="indefinite" begin="1.6s" path="M100,100 L160,140"/>
+              </circle>
+
+              <circle cx="80" cy="100" r="32" fill="rgba(0,183,194,.15)"/>
+              <circle cx="80" cy="100" r="24" fill="rgba(0,183,194,.25)"/>
+              <circle cx="80" cy="100" r="16" fill="#00B7C2">
+                <animate attributeName="r" values="16;18;16" dur="2.4s" repeatCount="indefinite"/>
+              </circle>
+              <g transform="translate(80,100)" stroke="white" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M0 -7v3M0 4v3M-7 0h3M4 0h3M-5 -5l2 2M3 3l2 2M-5 5l2 -2M3 -3l2 -2"/>
+              </g>
+            </svg>
+            <div class="sf-engine-label">AI Feed Engine</div>
+          </div>
+
+          <div class="sf-col sf-outputs">
+            <div class="sf-label right">Outputs</div>
+            <div class="sf-output">
+              <div class="sf-output-row">
+                <span class="sf-output-big metric">108 kg</span>
+                <span class="sf-output-tag up">+6.4%</span>
+              </div>
+              <div class="sf-output-sub">recommended for today</div>
+            </div>
+            <div class="sf-output">
+              <div class="sf-output-row">
+                <span class="sf-output-big metric">−18%</span>
+                <span class="sf-output-tag green">saved</span>
+              </div>
+              <div class="sf-output-sub">vs manual planning</div>
+            </div>
+            <div class="sf-output">
+              <div class="sf-output-row">
+                <span class="sf-output-big metric">1.18</span>
+                <span class="sf-output-tag green">optimal</span>
+              </div>
+              <div class="sf-output-sub">projected FCR</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sf-outcomes">
+          <div class="outcome">
+            <span class="outcome-value metric">18%</span>
+            <span class="outcome-label">Feed saved</span>
+            <span class="outcome-sub">vs traditional manual planning</span>
+          </div>
+          <div class="outcome">
+            <span class="outcome-value metric">0.27</span>
+            <span class="outcome-label">Better FCR</span>
+            <span class="outcome-sub">average improvement crop-over-crop</span>
+          </div>
+<div class="outcome">
+            <span class="outcome-value metric">₹38k</span>
+            <span class="outcome-label">Saved per acre</span>
+            <span class="outcome-sub">estimated per crop</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ TRUST ═══════════════════════ -->
+    <section id="trust" class="bg-cream">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow">Farmer trust</span>
+          <h2 class="h-section">
+            Built with farmers,
+            <span class="serif-accent" style="color: var(--aqua-600);">not for slide decks.</span>
+          </h2>
+          <p class="lead">
+            Real voices from real farms across the coast. We ship updates every two weeks based on what we hear in the WhatsApp group.
+          </p>
+        </div>
+
+<div class="trust-quotes-full" id="quotes-grid"><!-- cards injected --></div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ HOW IT WORKS ═══════════════════════ -->
+    <section id="how">
+      <div class="container">
+        <div class="section-intro">
+          <span class="eyebrow">How it works</span>
+          <h2 class="h-section">
+            Three steps.
+            <span class="serif-accent" style="color: var(--aqua-600);">One smarter farm.</span>
+          </h2>
+          <p class="lead">
+            No training. No spreadsheets. Open the app, add your ponds, and start making decisions like the top 1% of farms.
+          </p>
+        </div>
+
+        <div class="hiw-grid">
+          <!-- step 1 -->
+          <div class="hiw-step">
+            <div class="hiw-num"><span>STEP 01</span></div>
+            <h3 class="hiw-title">Create your farm</h3>
+            <p class="hiw-body">Add ponds, sizes, stocking density and seed. 60 seconds. No paperwork, no onboarding calls.</p>
+            <div class="hiw-visual">
+              <svg viewBox="0 0 240 130" style="width: 100%; height: 100%; padding: 12px;">
+                <defs>
+                  <linearGradient id="pond-g" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#7ee0e6" stop-opacity=".6"/>
+                    <stop offset="1" stop-color="#00B7C2" stop-opacity=".4"/>
+                  </linearGradient>
+                  <linearGradient id="pond-a" x1="0" x2="1" y1="0" y2="1">
+                    <stop offset="0" stop-color="#083D4A"/>
+                    <stop offset="1" stop-color="#156878"/>
+                  </linearGradient>
+                </defs>
+                <g>
+                  <rect x="22" y="28" width="56" height="32" rx="5" fill="url(#pond-g)" stroke="rgba(0,183,194,.35)" stroke-width="1"/>
+                  <text x="50" y="47" text-anchor="middle" font-size="9" font-weight="600" fill="#083D4A">A-1</text>
+                </g>
+                <g>
+                  <rect x="86" y="28" width="56" height="32" rx="5" fill="url(#pond-g)" stroke="rgba(0,183,194,.35)" stroke-width="1"/>
+                  <text x="114" y="47" text-anchor="middle" font-size="9" font-weight="600" fill="#083D4A">A-2</text>
+                </g>
+                <g>
+                  <rect x="150" y="28" width="56" height="32" rx="5" fill="url(#pond-g)" stroke="rgba(0,183,194,.35)" stroke-width="1"/>
+                  <text x="178" y="47" text-anchor="middle" font-size="9" font-weight="600" fill="#083D4A">A-3</text>
+                </g>
+                <g>
+                  <rect x="22" y="70" width="56" height="32" rx="5" fill="url(#pond-g)" stroke="rgba(0,183,194,.35)" stroke-width="1"/>
+                  <text x="50" y="89" text-anchor="middle" font-size="9" font-weight="600" fill="#083D4A">B-1</text>
+                </g>
+                <g>
+                  <rect x="86" y="70" width="56" height="32" rx="5" fill="url(#pond-g)" stroke="rgba(0,183,194,.35)" stroke-width="1"/>
+                  <text x="114" y="89" text-anchor="middle" font-size="9" font-weight="600" fill="#083D4A">B-2</text>
+                </g>
+                <g>
+                  <rect x="150" y="70" width="56" height="32" rx="5" fill="url(#pond-a)" stroke="#00B7C2" stroke-width="1"/>
+                  <text x="178" y="89" text-anchor="middle" font-size="9" font-weight="600" fill="#7ee0e6">B-3</text>
+                </g>
+                <text x="120" y="120" text-anchor="middle" font-size="8.5" fill="#74878f" font-weight="500" letter-spacing="0.08em">6 PONDS · 12 ACRES</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- step 2 -->
+          <div class="hiw-step">
+            <div class="hiw-num"><span>STEP 02</span></div>
+            <h3 class="hiw-title">Add pond &amp; feed data</h3>
+            <p class="hiw-body">Log feedings, tray checks and samplings as you walk the bund. The app remembers everything.</p>
+            <div class="hiw-visual">
+              <div class="hiw-log">
+                <div class="hiw-log-head"><span>Pond B-3</span><span>6:42 AM</span></div>
+                <div class="hiw-log-row">
+                  <div>
+                    <div class="hiw-log-l">Tray observation</div>
+                    <div class="hiw-log-v metric">84% consumed</div>
+                  </div>
+                  <span class="hiw-log-check">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+                  </span>
+                </div>
+                <div class="hiw-log-row">
+                  <div>
+                    <div class="hiw-log-l">Sampling weight</div>
+                    <div class="hiw-log-v metric">ABW 14.2 g</div>
+                  </div>
+                  <span style="font-size: 11px; color: var(--green-600); font-weight: 500;">+0.4 g</span>
+                </div>
+                <div class="hiw-log-sync">Saved · syncing</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- step 3 -->
+          <div class="hiw-step">
+            <div class="hiw-num"><span>STEP 03</span></div>
+            <h3 class="hiw-title">Get smart recommendations</h3>
+            <p class="hiw-body">Wake up to a feed plan tuned to last night's tray. Watch FCR and profit update in real time.</p>
+            <div class="hiw-visual dark">
+              <div class="hiw-ai">
+                <div class="hiw-ai-eyebrow">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" style="color: var(--aqua-300);"><path d="M12 3v4M12 17v4M5 12H1M23 12h-4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg>
+                  Smart Feed · today
+                </div>
+                <div class="hiw-ai-row">
+                  <span class="hiw-ai-num metric">108</span>
+                  <span class="hiw-ai-unit">kg / day</span>
+                </div>
+                <div class="hiw-ai-bars">
+                  <span style="height: 40%;"></span>
+                  <span style="height: 60%;"></span>
+                  <span style="height: 50%;"></span>
+                  <span style="height: 70%;"></span>
+                  <span style="height: 65%;"></span>
+                  <span class="on" style="height: 85%;"></span>
+                  <span class="on" style="height: 80%;"></span>
+                  <span class="on" style="height: 100%;"></span>
+                </div>
+                <div class="hiw-ai-cta">
+                  <span class="a">Accept</span>
+                  <span class="b">Adjust</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════ FINAL CTA ═══════════════════════ -->
+    <section id="cta" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="cta-card">
+          <div class="cta-bg" aria-hidden="true"></div>
+          <div class="cta-bg-2" aria-hidden="true"></div>
+          <div class="cta-deco" aria-hidden="true">
+            <svg viewBox="0 0 240 240">
+              <defs>
+                <radialGradient id="cta-rg" cx="50%" cy="50%">
+                  <stop offset="0" stop-color="#7ee0e6" stop-opacity=".4"/>
+                  <stop offset="1" stop-color="#7ee0e6" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+              <circle cx="120" cy="120" r="120" fill="url(#cta-rg)"/>
+              <circle cx="120" cy="120" r="40" fill="none" stroke="rgba(126,224,230,.4)" stroke-width="1" stroke-dasharray="3 5">
+                <animate attributeName="r" values="40;52;40" dur="4s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".6;.2;.6" dur="4s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="120" cy="120" r="65" fill="none" stroke="rgba(126,224,230,.4)" stroke-width="1" stroke-dasharray="3 5">
+                <animate attributeName="r" values="65;77;65" dur="5s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".6;.2;.6" dur="5s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="120" cy="120" r="90" fill="none" stroke="rgba(126,224,230,.4)" stroke-width="1" stroke-dasharray="3 5">
+                <animate attributeName="r" values="90;102;90" dur="6s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values=".6;.2;.6" dur="6s" repeatCount="indefinite"/>
+              </circle>
+              <circle cx="120" cy="120" r="22" fill="#00B7C2" opacity=".95"/>
+              <g transform="translate(120,120)" stroke="white" stroke-width="2" fill="none" stroke-linecap="round">
+                <path d="M-9 0L9 0M0 -9L0 9"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="cta-content">
+            <span class="pill ocean" style="margin-bottom: 22px;">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v4M12 17v4M5 12H1M23 12h-4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></svg>
+              Free · Built in India
+            </span>
+            <h2 class="h-section">
+              Start managing your farm
+              <span class="serif-accent" style="color: var(--aqua-300);">smarter today.</span>
+            </h2>
+            <p class="lead">
+              Free to install. Download the APK and see the difference in 7 days.
+            </p>
+
+            <div class="cta-buttons">
+              <button class="btn btn-accent btn-lg" data-open="apk">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+                Download APK
+                <span style="opacity: .55; font-size: 12px;">· 18 MB</span>
+              </button>
+            </div>
+
+            <div class="cta-checks">
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> Works offline at the pond</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> 6 Indian languages</span>
+              <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg> No card needed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer inside CTA section so it sits flush -->
+      <footer>
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <a href="#top" class="logo" aria-label="AquaRythu">
+                <span class="logo-mark">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 14c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0c1.5-1.5 3-1.5 3-1.5"/>
+                    <path d="M3 19c2.5-2.5 5-2.5 7.5 0s5 2.5 7.5 0c1.5-1.5 3-1.5 3-1.5"/>
+                  </svg>
+                </span>
+                AquaRythu
+              </a>
+              <p class="blurb">The AI operating system for shrimp farms. Built in India, for Indian farmers, with global polish.</p>
+              <div class="footer-socials">
+                <a href="#" class="social-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 21l1.7-4.3A8.5 8.5 0 1 1 20.5 12z M8 10c.5 2 2 3.5 4 4l1.2-1c.3-.3.8-.4 1.2-.2l2 .9c.4.2.6.6.5 1-.4 1.5-2 2.6-3.6 2.3a8 8 0 0 1-6.3-6.3c-.3-1.6.8-3.2 2.3-3.6.4-.1.8.1 1 .5l.9 2c.2.4.1.9-.2 1.2L9.8 12"/></svg></a>
+                <a href="#" class="social-btn">X</a>
+                <a href="#" class="social-btn">in</a>
+                <a href="#" class="social-btn">YT</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="footer-bottom">
+            <div>© 2026 AquaRythu Technologies Pvt. Ltd.</div>
+            <div class="ops">
+              <span><span class="dot"></span> All systems operational</span>
+              <span>Made on the Andhra coast</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════ MODALS ═══════════════════════ -->
+  <div class="modal-backdrop" id="modal-apk">
+    <div class="modal">
+      <button class="modal-close" data-close-modal aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="modal-mark apk">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+      </div>
+      <h3>Download AquaRythu APK</h3>
+      <p>We'll send the direct APK link to your WhatsApp — works offline, installs in 60 seconds. Your phone may need to allow "install from unknown sources" once.</p>
+      <div class="modal-phone-input">
+        <span>+91</span>
+        <input type="tel" placeholder="98765 43210" />
+      </div>
+      <button class="btn btn-primary btn-lg" style="width: 100%;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 21l1.7-4.3A8.5 8.5 0 1 1 20.5 12z M8 10c.5 2 2 3.5 4 4l1.2-1c.3-.3.8-.4 1.2-.2l2 .9c.4.2.6.6.5 1-.4 1.5-2 2.6-3.6 2.3a8 8 0 0 1-6.3-6.3c-.3-1.6.8-3.2 2.3-3.6.4-.1.8.1 1 .5l.9 2c.2.4.1.9-.2 1.2L9.8 12"/></svg>
+        Send APK link
+      </button>
+      <div class="modal-foot">Or scan the QR with your phone · 18 MB · Android 8+</div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="modal-wa">
+    <div class="modal">
+      <button class="modal-close" data-close-modal aria-label="Close">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <div class="modal-mark wa">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 21l1.7-4.3A8.5 8.5 0 1 1 20.5 12z M8 10c.5 2 2 3.5 4 4l1.2-1c.3-.3.8-.4 1.2-.2l2 .9c.4.2.6.6.5 1-.4 1.5-2 2.6-3.6 2.3a8 8 0 0 1-6.3-6.3c-.3-1.6.8-3.2 2.3-3.6.4-.1.8.1 1 .5l.9 2c.2.4.1.9-.2 1.2L9.8 12"/></svg>
+      </div>
+      <h3>Join the AquaRythu farmer group</h3>
+      <p>Farmers share tray reads, water tests and dealer prices every morning. Our team posts engine updates and answers questions in real time.</p>
+      <div class="wa-groups">
+        <button class="wa-group">
+          <span class="wa-group-mark">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 21l1.7-4.3A8.5 8.5 0 1 1 20.5 12z"/></svg>
+          </span>
+          <div style="flex: 1;">
+            <div class="name">Telugu group</div>
+            <div class="sub">Andhra Pradesh · 1,820 members</div>
+          </div>
+          <svg width="16" height="16" class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <button class="wa-group">
+          <span class="wa-group-mark">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 21l1.7-4.3A8.5 8.5 0 1 1 20.5 12z"/></svg>
+          </span>
+          <div style="flex: 1;">
+            <div class="name">Hindi group</div>
+            <div class="sub">Gujarat · 940 members</div>
+          </div>
+          <svg width="16" height="16" class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <button class="wa-group">
+          <span class="wa-group-mark">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 21l1.7-4.3A8.5 8.5 0 1 1 20.5 12z"/></svg>
+          </span>
+          <div style="flex: 1;">
+            <div class="name">Tamil group</div>
+            <div class="sub">Tamil Nadu · 680 members</div>
+          </div>
+          <svg width="16" height="16" class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <button class="wa-group">
+          <span class="wa-group-mark">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-12.6 7.4L3.5 21l1.7-4.3A8.5 8.5 0 1 1 20.5 12z"/></svg>
+          </span>
+          <div style="flex: 1;">
+            <div class="name">Odia group</div>
+            <div class="sub">Odisha · 510 members</div>
+          </div>
+          <svg width="16" height="16" class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════ TWEAKS PANEL ═══════════════════════ -->
+  <button class="tweaks-toggle" id="tweaks-toggle" aria-label="Open tweaks">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+
+  <div class="tweaks-panel" id="tweaks-panel">
+    <div class="tweaks-head">
+      <span class="tweaks-title">Tweaks</span>
+      <span class="tweaks-close" id="tweaks-close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </span>
+    </div>
+
+    <div class="tweaks-section">
+      <div class="tweaks-section-label">Brand palette</div>
+      <div class="tweaks-swatches" data-tweak="palette">
+        <button class="tweaks-swatch on" data-value="ocean" aria-label="Deep Ocean">
+          <span style="background:#00B7C2"></span><span style="background:#083D4A"></span><span style="background:#7ee0e6"></span>
+        </button>
+        <button class="tweaks-swatch" data-value="twilight" aria-label="Twilight">
+          <span style="background:#4dabf7"></span><span style="background:#1a2e4a"></span><span style="background:#a3d5fc"></span>
+        </button>
+        <button class="tweaks-swatch" data-value="mangrove" aria-label="Mangrove">
+          <span style="background:#2da681"></span><span style="background:#1a3d2e"></span><span style="background:#7fd4b3"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tweaks-section">
+      <div class="tweaks-section-label">Hero headline</div>
+      <div class="tweaks-radio" data-tweak="headline">
+        <button class="on" data-value="intelligent">Intelligence</button>
+        <button data-value="smartest">Smartest</button>
+        <button data-value="os">OS</button>
+      </div>
+    </div>
+
+    <div class="tweaks-section">
+      <div class="tweaks-section-label">Density</div>
+      <div class="tweaks-radio" data-tweak="density">
+        <button data-value="compact">Compact</button>
+        <button class="on" data-value="comfortable">Comfort</button>
+        <button data-value="spacious">Spacious</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
