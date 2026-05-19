@@ -46,20 +46,20 @@
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--outline);
   }
+  .nav-logo { height: 36px; }
   .nav-brand { display: flex; align-items: center; gap: 8px; text-decoration: none; }
-  .nav-brand img { height: 38px; width: auto; display: block; }
   .nav-links { display: none; align-items: center; gap: 28px; }
   .nav-links a { font-size: 14px; font-weight: 600; color: var(--on-surface-dim); text-decoration: none; transition: color .2s; }
   .nav-links a:hover { color: var(--primary); }
   .nav-cta {
     display: none;
-    background: var(--primary); color: #fff;
+    background: var(--accent-dark); color: #fff;
     padding: 9px 20px; border-radius: 10px;
     font-size: 13px; font-weight: 700;
     text-decoration: none; letter-spacing: 0.3px;
     transition: background .2s, transform .15s;
   }
-  .nav-cta:hover { background: var(--primary-light); transform: translateY(-1px); }
+  .nav-cta:hover { background: var(--accent); transform: translateY(-1px); }
 
   @media (min-width: 768px) {
     .nav { padding: 0 48px; height: 68px; }
@@ -93,32 +93,36 @@
 
   .btn-primary {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-    background: #f8b800; color: #121212;
+    background: var(--accent-dark); color: #fff;
     padding: 16px 28px; border-radius: 16px;
     font-size: 15px; font-weight: 700;
     text-decoration: none; border: none; cursor: pointer;
     transition: background .2s, transform .15s, box-shadow .2s;
-    box-shadow: 0 10px 30px rgba(248,184,0,0.25);
     width: 100%;
   }
-  .btn-primary:hover { background: #ffca28; transform: translateY(-1px); box-shadow: 0 14px 34px rgba(248,184,0,0.35); }
+  .btn-primary:hover { background: var(--accent); transform: translateY(-1px); }
   .btn-primary:active { transform: scale(0.98); }
 
   .hero-image {
     position: relative;
-    width: 100%;
-    height: 70vh;
-    min-height: 420px;
-    overflow: hidden;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
+    overflow: hidden;
+    min-height: 420px;
   }
   .hero-image picture { display: contents; }
   .hero-image img {
     width: 100%;
-    height: 100%;
+    max-width: 680px;
+    height: auto;
     object-fit: cover;
-    object-position: center;
-    display: block;
+    object-position: center center;
+    transform: scale(1.12);
+    border-radius: 0;
+    box-shadow: none;
   }
 
   @media (min-width: 768px) {
@@ -131,7 +135,8 @@
     }
     .hero-content { padding: 80px 48px 80px 64px; order: 2; }
     .hero-ctas { max-width: 100%; }
-    .hero-image { padding: 0; order: 1; }
+    .hero-image { padding: 0; order: 1; align-items: center; }
+    .hero-image img { max-width: 100%; border-radius: 16px; }
   }
   @media (min-width: 1024px) {
     .hero-content { padding: 100px 64px 100px 80px; }
@@ -156,6 +161,10 @@
     color: var(--primary-dark); line-height: 1.15;
     margin-bottom: 16px;
     max-width: 760px;
+  }
+  .highlight-text { color: var(--accent-dark); }
+  @media (max-width: 767px) {
+    .hero .section-title { font-size: clamp(19px, 5vw, 28px); }
   }
   .section-sub {
     font-size: 15px; color: var(--on-surface-dim); line-height: 1.75;
@@ -303,38 +312,6 @@
   .step-body h4 { font-size: 16px; font-weight: 700; color: var(--on-surface); margin-bottom: 6px; }
   .step-body p { font-size: 14px; line-height: 1.75; color: var(--on-surface-dim); }
 
-  /* ── PRICING TEASER ── */
-  .pricing-section { background: #fff; }
-  .pricing-cards {
-    display: grid; gap: 16px; margin-top: 40px;
-  }
-  @media (min-width: 640px) { .pricing-cards { grid-template-columns: 1fr 1fr; } }
-
-  .price-card {
-    border-radius: 20px; padding: 28px;
-    border: 2px solid var(--outline);
-    position: relative; transition: transform .2s, box-shadow .2s;
-  }
-  .price-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px var(--shadow); }
-  .price-card.pro {
-    border-color: var(--primary);
-    background: linear-gradient(145deg, #f0f5ff, #e8f0ff);
-  }
-  .price-badge {
-    position: absolute; top: -12px; right: 20px;
-    background: var(--primary); color: #fff;
-    font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
-    padding: 4px 14px; border-radius: 100px;
-  }
-  .price-tier { font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--on-surface-dim); margin-bottom: 6px; }
-  .price-amount { font-size: 32px; font-weight: 800; font-family: 'JetBrains Mono', monospace; color: var(--primary); margin-bottom: 4px; }
-  .price-amount .period { font-size: 13px; font-weight: 400; color: var(--on-surface-dim); }
-  .price-desc { font-size: 13px; color: var(--on-surface-dim); margin-bottom: 20px; }
-  .price-features { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .price-features li { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; }
-  .price-features li .icon { font-size: 16px; color: var(--accent-dark); margin-top: 1px; flex-shrink: 0; }
-  .price-features li .icon.x { color: var(--on-surface-dim); }
-
   /* ── FAQ ── */
   .faq-section { background: var(--surface); }
   .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 14px; max-width: 840px; width: 100%; margin-left: auto; margin-right: auto; }
@@ -382,14 +359,14 @@
 
   .apk-btn {
     display: inline-flex; align-items: center; gap: 10px;
-    background: var(--accent); color: #fff;
+    background: var(--accent-dark); color: #fff;
     padding: 16px 32px; border-radius: 14px;
     font-size: 16px; font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 8px 28px rgba(0,185,107,0.4);
-    transition: transform .15s, box-shadow .2s;
+    box-shadow: 0 8px 28px rgba(0, 110, 47, 0.4);
+    transition: transform .15s, box-shadow .2s, background .2s;
   }
-  .apk-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(0,185,107,0.5); }
+  .apk-btn:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 36px rgba(0, 110, 47, 0.5); }
   .apk-btn:active { transform: scale(0.97); }
   .apk-btn .icon { font-size: 22px; }
 
@@ -434,12 +411,11 @@
   }
   .sticky-cta a {
     flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px;
-    background: var(--primary); color: #fff;
+    background: var(--accent-dark); color: #fff;
     padding: 14px; border-radius: 12px;
     font-size: 14px; font-weight: 700; letter-spacing: 0.3px;
     text-decoration: none;
-    box-shadow: 0 4px 16px rgba(0,63,135,0.3);
-    transition: transform .15s;
+    transition: transform .15s, box-shadow .2s;
   }
   .sticky-cta a:active { transform: scale(0.97); }
   @media (min-width: 768px) { .sticky-cta { display: none; } }
@@ -456,6 +432,19 @@
     transition: opacity .5s ease, transform .5s ease;
   }
   .fade-up.visible { opacity: 1; transform: none; }
+
+  .anim-pulse {
+    animation: pulse-green 2s infinite ease-in-out;
+  }
+
+  @keyframes pulse-green {
+    0%, 100% {
+      box-shadow: 0 6px 24px rgba(0, 110, 47, 0.35);
+    }
+    50% {
+      box-shadow: 0 12px 36px rgba(0, 110, 47, 0.5);
+    }
+  }
 </style>
 </head>
 <body>
@@ -463,12 +452,11 @@
 <!-- NAV -->
 <header class="nav">
   <a class="nav-brand" href="#">
-    <img src="https://res.cloudinary.com/dpyniai9l/image/upload/v1779179588/Screenshot_2026-05-19_at_10.53.28_AM-removebg-preview_zhxrqb.png?v=1" alt="AquaRythu logo">
+    <img src="https://res.cloudinary.com/dpyniai9l/image/upload/v1779179588/Screenshot_2026-05-19_at_10.53.28_AM-removebg-preview_zhxrqb.png" alt="AquaRythu logo" class="nav-logo">
   </a>
   <nav class="nav-links">
     <a href="#features">Features</a>
     <a href="#how">How It Works</a>
-    <a href="#pricing">Pricing</a>
     <a href="#faq">FAQ</a>
   </nav>
   <a class="nav-cta" href="#download">↓ Get APK</a>
@@ -478,16 +466,16 @@
 <section class="hero">
   <div class="hero-image">
     <picture>
-      <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dpyniai9l/image/upload/v1779178222/hero-desktop_tlqikm.png?v=2">
-      <img src="https://res.cloudinary.com/dpyniai9l/image/upload/v1779171455/mobile_svwxon.png?v=2" alt="AquaRythu app">
+      <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dpyniai9l/image/upload/v1779178222/hero-desktop_tlqikm.png">
+      <img src="https://res.cloudinary.com/dpyniai9l/image/upload/v1779171455/mobile_svwxon.png" alt="AquaRythu app">
     </picture>
   </div>
 
   <div class="hero-content">
-    <h1 class="section-title">Reduce Feed Waste.<br>Boost Shrimp Profits.</h1>
-    <p class="section-sub">Smart shrimp farming platform with feed tracking, growth monitoring, and AI-powered farm insights - built for vannamei farmers in East &amp; West Godavari, Krishna districts.</p>
+    <h1 class="section-title">Reduce Feed Waste. <span class="highlight-text">Boost Shrimp Profits.</span></h1>
+    <p class="section-sub">Built for vannamei farmers — smart feed planning, tray tracking, water monitoring, and AI-powered farm insights in one app.</p>
     <div class="hero-ctas">
-      <a class="btn-primary" href="#download">
+      <a class="btn-primary anim-pulse" href="#download">
         <span class="material-symbols-outlined">download_for_offline</span>
         Download Free APK
       </a>
@@ -631,47 +619,6 @@
   </div>
 </section>
 
-<!-- PRICING -->
-<section class="pricing-section" id="pricing">
-  <div class="container">
-    <div class="section-label">Pricing</div>
-    <h2 class="section-title">Start Free. Upgrade When You're Ready.</h2>
-    <p class="section-sub">Core feed logging and tracking is free forever. Pro features unlock when you need deeper intelligence.</p>
-
-    <div class="pricing-cards fade-up">
-      <div class="price-card">
-        <div class="price-tier">Free Tier</div>
-        <div class="price-amount">₹0 <span class="period">/ forever</span></div>
-        <div class="price-desc">For farmers getting started with digital farm management.</div>
-        <ul class="price-features">
-          <li><span class="material-symbols-outlined icon">check_circle</span> Unlimited farms &amp; ponds</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> Daily feed logging</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> DOC &amp; stocking tracking</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> Full feed history forever</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> Offline support</li>
-          <li><span class="material-symbols-outlined icon x">remove_circle_outline</span> FCR insights &amp; alerts</li>
-          <li><span class="material-symbols-outlined icon x">remove_circle_outline</span> Harvest readiness reports</li>
-        </ul>
-      </div>
-      <div class="price-card pro">
-        <div class="price-badge">POPULAR</div>
-        <div class="price-tier">Pro Tier</div>
-        <div class="price-amount">₹999 <span class="period">/ crop cycle</span></div>
-        <div class="price-desc">For serious farmers who want to maximise every harvest.</div>
-        <ul class="price-features">
-          <li><span class="material-symbols-outlined icon">check_circle</span> Everything in Free</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> FCR insights &amp; abnormal alerts</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> Pond performance comparison</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> Survival estimation</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> Harvest readiness &amp; reports</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> Supervisor &amp; worker tools</li>
-          <li><span class="material-symbols-outlined icon">check_circle</span> First pond Pro — free forever</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq-section" id="faq">
   <div class="container">
@@ -744,16 +691,16 @@
     </div>
     <div class="footer-bottom">
       <p>© 2024 AquaRythu. Built for shrimp farmers.</p>
-      <span class="footer-version">v2.4.0 Production</span>
+      <span class="footer-version">v1.0 Production</span>
     </div>
   </div>
 </footer>
 
 <!-- STICKY MOBILE CTA -->
 <div class="sticky-cta">
-  <a href="#download">
+  <a href="#download" class="anim-pulse">
     <span class="material-symbols-outlined">download_for_offline</span>
-    Get Free App — Download APK
+    Download APK
   </a>
 </div>
 
