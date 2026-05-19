@@ -106,16 +106,25 @@
   .btn-primary:active { transform: scale(0.98); }
 
   .hero-image {
-    position: relative; z-index: 2;
-    display: flex; justify-content: center; align-items: flex-start;
-    padding: 0 24px 32px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+    min-height: 420px;
   }
   .hero-image picture { display: contents; }
   .hero-image img {
-    width: 100%; max-width: 520px;
+    width: 100%;
+    max-width: 680px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1.12);
+    border-radius: 0;
+    box-shadow: none;
   }
 
   @media (min-width: 768px) {
@@ -477,8 +486,8 @@
 <section class="hero">
   <div class="hero-image">
     <picture>
-      <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dpyniai9l/image/upload/v1779118363/image_desktop_jjivlf.png">
-      <img src="https://res.cloudinary.com/dpyniai9l/image/upload/v1779117362/farmer_yge667.png" alt="AquaRythu app">
+      <source media="(min-width: 768px)" srcset="https://res.cloudinary.com/dpyniai9l/image/upload/v1779131005/farer-image-fcr_1_bwla1d.png">
+      <img src="https://res.cloudinary.com/dpyniai9l/image/upload/v1779131005/farer-image-fcr_1_bwla1d.png" alt="AquaRythu app">
     </picture>
   </div>
 
