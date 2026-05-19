@@ -48,7 +48,15 @@
   }
   .nav-logo { height: 36px; }
   .nav-brand { display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .nav-toggle { display: block; background: none; border: none; color: var(--on-surface); cursor: pointer; padding: 4px; display: flex; align-items: center; justify-content: center; }
   .nav-links { display: none; align-items: center; gap: 28px; }
+  .nav-links.active {
+    display: flex; flex-direction: column; align-items: flex-start;
+    position: absolute; top: 60px; left: 0; right: 0;
+    background: rgba(255, 255, 255, 0.98); padding: 24px; gap: 20px;
+    border-bottom: 1px solid var(--outline); box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  }
+  .nav-links.active a { font-size: 16px; width: 100%; padding: 4px 0; }
   .nav-links a { font-size: 14px; font-weight: 600; color: var(--on-surface-dim); text-decoration: none; transition: color .2s; }
   .nav-links a:hover { color: var(--primary); }
   .nav-cta {
@@ -63,7 +71,10 @@
 
   @media (min-width: 768px) {
     .nav { padding: 0 48px; height: 68px; }
+    .nav-toggle { display: none; }
     .nav-links { display: flex; }
+    .nav-links.active { position: static; background: transparent; padding: 0; border: none; box-shadow: none; flex-direction: row; gap: 28px; }
+    .nav-links.active a { font-size: 14px; width: auto; padding: 0; }
     .nav-cta { display: block; }
   }
 
@@ -87,9 +98,12 @@
     max-width: 720px;
     margin: 0 auto;
     justify-content: center;
+    order: 1;
   }
 
   .hero-ctas { display: flex; flex-direction: column; gap: 14px; width: 100%; max-width: 420px; }
+  .hero-proof-top { font-size: 13px; font-weight: 600; color: var(--on-surface-dim); margin-bottom: -4px; text-align: center; }
+  .hero-proof { font-size: 13px; font-weight: 600; color: var(--on-surface-dim); margin-top: -6px; }
 
   .btn-primary {
     display: inline-flex; align-items: center; justify-content: center; gap: 10px;
@@ -111,18 +125,16 @@
     align-items: center;
     padding: 0;
     overflow: hidden;
-    min-height: 420px;
+    order: 2;
   }
   .hero-image picture { display: contents; }
   .hero-image img {
     width: 100%;
-    max-width: 680px;
+    max-width: 480px;
     height: auto;
     object-fit: cover;
     object-position: center center;
-    transform: scale(1.12);
-    border-radius: 0;
-    box-shadow: none;
+    border-radius: 16px;
   }
 
   @media (min-width: 768px) {
@@ -133,10 +145,11 @@
       gap: 42px;
       min-height: 88vh;
     }
-    .hero-content { padding: 80px 48px 80px 64px; order: 2; }
-    .hero-ctas { max-width: 100%; }
-    .hero-image { padding: 0; order: 1; align-items: center; }
-    .hero-image img { max-width: 100%; border-radius: 16px; }
+    .hero-content { padding: 80px 48px 80px 64px; order: 1; text-align: left; align-items: flex-start; }
+    .hero-proof-top { text-align: left; }
+    .hero-ctas { max-width: 420px; }
+    .hero-image { padding: 0; order: 2; align-items: center; }
+    .hero-image img { max-width: 80%; border-radius: 16px; }
   }
   @media (min-width: 1024px) {
     .hero-content { padding: 100px 64px 100px 80px; }
@@ -189,65 +202,39 @@
   .trust-item .icon { font-size: 24px; color: var(--accent-dark); }
   .trust-item span { font-size: 14px; font-weight: 700; color: var(--on-surface); }
 
-  /* ── KPI GRID ── */
-  .kpi-section { background: var(--water-blue); }
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px; margin-top: 40px;
+  /* ── PROBLEMS TO SOLUTION ── */
+  .problems-solution-section { background: #fff; }
+  .ps-grid {
+    display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 40px;
   }
-  @media (min-width: 640px) { .kpi-grid { grid-template-columns: repeat(2,1fr); } }
-  @media (min-width: 1024px) { .kpi-grid { grid-template-columns: repeat(3,1fr); gap: 22px; } }
+  @media (min-width: 768px) {
+    .ps-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  }
 
-  .kpi-card {
-    background: #fff;
-    border: 1px solid var(--outline);
-    border-radius: 20px; padding: 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-    transition: transform .2s, box-shadow .2s;
-    position: relative; overflow: hidden;
-  }
-  .kpi-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
-    background: linear-gradient(90deg, var(--primary), var(--accent));
-  }
-  .kpi-card:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(0,0,0,0.08); }
-  .kpi-card.green::before { background: linear-gradient(90deg, var(--accent), #00d678); }
-  .kpi-label { font-size: 12px; font-weight: 700; color: var(--on-surface-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-  .kpi-value { font-size: 30px; font-weight: 800; font-family: 'JetBrains Mono', monospace; color: var(--primary); line-height: 1; margin-bottom: 8px; }
-  .kpi-value.green { color: var(--accent-dark); }
-  .kpi-note { font-size: 12px; color: var(--on-surface-dim); }
-  .kpi-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: var(--accent-dark); background: rgba(0,185,107,0.12); padding: 4px 10px; border-radius: 999px; }
-  .kpi-badge .material-symbols-outlined { font-size: 12px; }
-
-  /* ── FEATURES ── */
-  .features-section { background: #fff; }
-  .features-grid {
-    display: grid; gap: 16px; margin-top: 48px;
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 640px) { .features-grid { grid-template-columns: 1fr 1fr; } }
-  @media (min-width: 1024px) { .features-grid { grid-template-columns: repeat(2,1fr); } }
-
-  .feature-card {
-    padding: 24px; border-radius: 16px;
+  .ps-card {
+    padding: 32px 24px; border-radius: 20px;
     border: 1px solid var(--outline);
     background: var(--surface);
-    transition: transform .2s, box-shadow .2s;
   }
-  .feature-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px var(--shadow); }
-  .feature-icon {
-    width: 48px; height: 48px; border-radius: 12px;
+  .ps-card.solution {
+    background: var(--water-blue);
+    border-color: var(--primary-light);
+    box-shadow: 0 8px 32px var(--shadow);
+  }
+  .ps-title { font-size: 18px; font-weight: 800; margin-bottom: 24px; }
+  .ps-card.problems .ps-title { color: var(--error); }
+  .ps-card.solution .ps-title { color: var(--primary); }
+  
+  .ps-list { display: flex; flex-direction: column; gap: 16px; }
+  .ps-item { display: flex; align-items: center; gap: 14px; }
+  .ps-item .icon {
+    width: 32px; height: 32px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    margin-bottom: 14px;
-    font-size: 24px;
+    font-size: 18px; flex-shrink: 0;
   }
-  .feature-icon.blue { background: rgba(0,63,135,0.1); color: var(--primary); }
-  .feature-icon.green { background: rgba(0,185,107,0.1); color: var(--accent-dark); }
-  .feature-icon.warn { background: rgba(230,126,34,0.1); color: var(--warn); }
-  .feature-icon.error { background: rgba(192,57,43,0.1); color: var(--error); }
-  .feature-title { font-size: 15px; font-weight: 700; color: var(--on-surface); margin-bottom: 6px; }
-  .feature-desc { font-size: 13px; line-height: 1.6; color: var(--on-surface-dim); }
+  .ps-card.problems .ps-item .icon { background: rgba(192,57,43,0.1); color: var(--error); }
+  .ps-card.solution .ps-item .icon { background: rgba(0,185,107,0.15); color: var(--accent-dark); font-weight: 700; }
+  .ps-item-text { font-size: 15px; font-weight: 600; color: var(--on-surface); line-height: 1.4; }
 
   /* ── SCREENSHOTS ── */
   .screenshots-section { background: linear-gradient(135deg, #001f4d, #003f87); overflow: hidden; }
@@ -454,12 +441,15 @@
   <a class="nav-brand" href="#">
     <img src="https://res.cloudinary.com/dpyniai9l/image/upload/v1779179588/Screenshot_2026-05-19_at_10.53.28_AM-removebg-preview_zhxrqb.png" alt="AquaRythu logo" class="nav-logo">
   </a>
+  <button class="nav-toggle" id="mobile-menu-btn" aria-label="Toggle menu">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
   <nav class="nav-links">
     <a href="#features">Features</a>
     <a href="#how">How It Works</a>
     <a href="#faq">FAQ</a>
   </nav>
-  <a class="nav-cta" href="#download">↓ Get APK</a>
+  <a class="nav-cta" href="#download">Start Free Farm Tracking</a>
 </header>
 
 <!-- HERO -->
@@ -472,13 +462,15 @@
   </div>
 
   <div class="hero-content">
-    <h1 class="section-title">Reduce Feed Waste. <span class="highlight-text">Boost Shrimp Profits.</span></h1>
-    <p class="section-sub">Built for vannamei farmers — smart feed planning, tray tracking, water monitoring, and AI-powered farm insights in one app.</p>
+    <h1 class="section-title">One Wrong Feed Decision Can <span class="highlight-text">Cost Thousands.</span></h1>
+    <p class="section-sub">AquaRythu helps shrimp farmers track feed, improve FCR, reduce waste, and monitor pond health from stocking to harvest.</p>
     <div class="hero-ctas">
+      <p class="hero-proof-top">Trusted by shrimp farmers across East &amp; West Godavari</p>
       <a class="btn-primary anim-pulse" href="#download">
         <span class="material-symbols-outlined">download_for_offline</span>
-        Download Free APK
+        Start Free Farm Tracking
       </a>
+      <p class="hero-proof">Works Offline at Pond Side</p>
     </div>
   </div>
 </section>
@@ -487,8 +479,8 @@
 <section class="trust">
   <div class="trust-inner container">
     <div class="trust-item">
-      <span class="material-symbols-outlined icon">offline_bolt</span>
-      <span>Works Offline at Pond Side</span>
+      <span class="material-symbols-outlined icon">analytics</span>
+      <span>120+ Ponds Tracked</span>
     </div>
     <div class="trust-item">
       <span class="material-symbols-outlined icon">check_circle</span>
@@ -501,60 +493,55 @@
   </div>
 </section>
 
-<!-- KPI -->
-<section class="kpi-section" id="features">
-  <div class="container">
-    <div class="section-label">Live Farm Data</div>
-    <h2 class="section-title">Your Pond at a Glance</h2>
-    <p class="section-sub">Live feed cost, FCR, and survival metrics keep every pond on track from stocking to harvest.</p>
-
-    <div class="kpi-grid fade-up">
-      <div class="kpi-card">
-        <div class="kpi-label">Feed Cost Tracked</div>
-        <div class="kpi-value">₹18,240</div>
-        <div class="kpi-note">This Month</div>
-      </div>
-      <div class="kpi-card green">
-        <div class="kpi-label">Current FCR</div>
-        <div class="kpi-value green">1.32</div>
-        <div class="kpi-badge"><span class="material-symbols-outlined filled">stars</span> Excellent</div>
-      </div>
-      <div class="kpi-card green">
-        <div class="kpi-label">Survival Rate</div>
-        <div class="kpi-value green">94%</div>
-        <div class="kpi-note">This Cycle</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="features-section">
+<!-- PROBLEMS & SOLUTION -->
+<section class="problems-solution-section" id="features">
   <div class="container">
     <div class="section-label">Why AquaRythu</div>
     <h2 class="section-title">Designed Around Shrimp Farm Reality</h2>
-    <p class="section-sub">Essential features that help you feed better, track pond health, track profit, and catch disease risk early.</p>
+    <p class="section-sub">Stop guessing and start tracking. We built this to solve your biggest daily challenges.</p>
 
-    <div class="features-grid fade-up">
-      <div class="feature-card">
-        <div class="feature-icon blue"><span class="material-symbols-outlined">psychology</span></div>
-        <div class="feature-title">Smart Feed Recommendations</div>
-        <div class="feature-desc">ABW-based feed rates with tray multipliers. Cut overfeeding, improve FCR across every round of the day.</div>
+    <div class="ps-grid fade-up">
+      <div class="ps-card problems">
+        <h3 class="ps-title">Common Farming Problems</h3>
+        <div class="ps-list">
+          <div class="ps-item">
+            <div class="icon"><span class="material-symbols-outlined">close</span></div>
+            <div class="ps-item-text">Overfeeding increases FCR</div>
+          </div>
+          <div class="ps-item">
+            <div class="icon"><span class="material-symbols-outlined">close</span></div>
+            <div class="ps-item-text">Workers feed inconsistently</div>
+          </div>
+          <div class="ps-item">
+            <div class="icon"><span class="material-symbols-outlined">close</span></div>
+            <div class="ps-item-text">Hard to track pond performance</div>
+          </div>
+          <div class="ps-item">
+            <div class="icon"><span class="material-symbols-outlined">close</span></div>
+            <div class="ps-item-text">Disease signs noticed too late</div>
+          </div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon green"><span class="material-symbols-outlined">monitoring</span></div>
-        <div class="feature-title">Pond Health Tracking</div>
-        <div class="feature-desc">Survival rate, biomass, and growth trends tracked in real time across all your ponds — one dashboard.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon green"><span class="material-symbols-outlined">account_balance_wallet</span></div>
-        <div class="feature-title">Expense &amp; Profit Tracking</div>
-        <div class="feature-desc">Understand production cost and profitability down to the pond level and crop cycle.</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon error"><span class="material-symbols-outlined">notification_important</span></div>
-        <div class="feature-title">Disease Risk Alerts</div>
-        <div class="feature-desc">Mortality spikes, overfeeding trends, low survival — intelligent alerts help you act fast.</div>
+      <div class="ps-card solution">
+        <h3 class="ps-title">AquaRythu Helps You</h3>
+        <div class="ps-list">
+          <div class="ps-item">
+            <div class="icon"><span class="material-symbols-outlined">check</span></div>
+            <div class="ps-item-text">Smart feed recommendations</div>
+          </div>
+          <div class="ps-item">
+            <div class="icon"><span class="material-symbols-outlined">check</span></div>
+            <div class="ps-item-text">Daily feed &amp; tray tracking</div>
+          </div>
+          <div class="ps-item">
+            <div class="icon"><span class="material-symbols-outlined">check</span></div>
+            <div class="ps-item-text">Growth &amp; survival monitoring</div>
+          </div>
+          <div class="ps-item">
+            <div class="icon"><span class="material-symbols-outlined">check</span></div>
+            <div class="ps-item-text">Early risk visibility</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -636,7 +623,7 @@
       </details>
       <details class="faq">
         <summary>Can I manage multiple ponds &amp; farms? <span class="material-symbols-outlined chevron">expand_more</span></summary>
-        <div class="faq-body">Absolutely. The app supports unlimited ponds and farms from a single dashboard. Great for farmers managing 5–20+ acres.</div>
+        <div class="faq-body">Absolutely. The app supports multiple ponds and farms from a single dashboard. Great for farmers managing 5–20+ acres.</div>
       </details>
       <details class="faq">
         <summary>Which Android devices are supported? <span class="material-symbols-outlined chevron">expand_more</span></summary>
@@ -658,13 +645,13 @@
 <section class="cta-section" id="download">
   <div class="container cta-inner">
     <div class="section-label light">Ready for Better Data</div>
-    <h2 class="section-title">Start Your Next Crop With Better Data</h2>
-    <p class="section-sub">Join shrimp farmers using AquaRythu to track feed, monitor pond health, and reduce farming mistakes.</p>
+    <h2 class="section-title">Start Tracking Your Shrimp Farm Free</h2>
+    <p class="section-sub">Install AquaRythu and start logging feed today.</p>
 
     <div class="cta-btn-group">
       <a class="apk-btn" href="#">
         <span class="material-symbols-outlined icon">download_for_offline</span>
-        Download Free APK
+        Start Free Farm Tracking
       </a>
     </div>
     <p class="version-note">v2.4.0 · Android 8.0+ · APK Direct Install</p>
@@ -700,7 +687,7 @@
 <div class="sticky-cta">
   <a href="#download" class="anim-pulse">
     <span class="material-symbols-outlined">download_for_offline</span>
-    Download APK
+    Start Free Farm Tracking
   </a>
 </div>
 
@@ -710,6 +697,23 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+  menuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    const icon = menuBtn.querySelector('.material-symbols-outlined');
+    icon.textContent = navLinks.classList.contains('active') ? 'close' : 'menu';
+  });
+
+  // Close mobile menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+      menuBtn.querySelector('.material-symbols-outlined').textContent = 'menu';
+    });
+  });
 </script>
 </body>
 </html>
