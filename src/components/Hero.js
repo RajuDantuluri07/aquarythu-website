@@ -18,7 +18,7 @@ export default function Hero() {
             Manage ponds, feed, water quality, sampling, harvests and farm records — all in one app.
           </p>
           <div className="hero-cta-group">
-            <a href="https://github.com/RajuDantuluri07/aquarythu-apk/releases/download/v1.0.7%2B10/app-release.apk" className="btn-primary">Download the App</a>
+            <a href="https://app.aquarythu.com/" className="btn-primary">Start Free</a>
           </div>
         </div>
         

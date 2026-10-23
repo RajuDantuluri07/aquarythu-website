@@ -231,7 +231,7 @@ export default function HowItWorks() {
 
               <div className="hiw-cta-links">
                 <a href="/#features" className="btn-secondary">Explore Features</a>
-                <a href="https://github.com/RajuDantuluri07/aquarythu-apk/releases/download/v1.0.7%2B10/app-release.apk" className="btn-primary">Download App</a>
+                <a href="https://app.aquarythu.com/" className="btn-primary">Start Free</a>
               </div>
             </div>
 

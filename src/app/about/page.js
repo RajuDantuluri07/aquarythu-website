@@ -38,7 +38,7 @@ export default function About() {
             
             <div style={{ marginTop: '60px', padding: '32px', backgroundColor: '#f8fafc', borderRadius: '12px', border: '1px solid #e2e8f0', textAlign: 'center' }}>
               <h4 style={{ fontSize: '1.25rem', color: 'var(--color-text-main)', marginBottom: '16px' }}>Ready to transform your farm?</h4>
-              <a href="/download" className="btn-primary" style={{ display: 'inline-block', fontSize: '1.1rem', padding: '12px 32px' }}>Download APK</a>
+              <a href="https://app.aquarythu.com/" className="btn-primary" style={{ display: 'inline-block', fontSize: '1.1rem', padding: '12px 32px' }}>Start Free</a>
             </div>
           </div>
         </div>

@@ -70,7 +70,7 @@ export default function Header() {
             <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
             <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
             <a href="https://app.aquarythu.com/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Log in</a>
-            <a href="https://github.com/RajuDantuluri07/aquarythu-apk/releases/download/v1.0.7%2B10/app-release.apk" onClick={() => setMenuOpen(false)}>Download App</a>
+            <a href="https://app.aquarythu.com/" onClick={() => setMenuOpen(false)}>Start Free</a>
           </div>
         )}
       </div>

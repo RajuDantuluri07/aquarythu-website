@@ -29,7 +29,7 @@ export default function Footer() {
               <h4>Product</h4>
               <a href="#features" onClick={(e) => handleScroll(e, 'features')}>Features</a>
               <a href="#faq" onClick={(e) => handleScroll(e, 'faq')}>FAQ</a>
-              <a href="https://github.com/RajuDantuluri07/aquarythu-apk/releases/download/v1.0.7%2B10/app-release.apk">Download App</a>
+              <a href="https://app.aquarythu.com/">Start Free</a>
             </div>
             <div className="link-group">
               <h4>Company</h4>
