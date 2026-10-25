@@ -40,6 +40,11 @@ export default function Header() {
           <a href="/about">About</a>
           <a href="/contact">Contact</a>
         </nav>
+
+        <div className="header-actions">
+          <a href="https://app.aquarythu.com/login" className="header-login">Log in</a>
+          <a href="https://app.aquarythu.com/" className="header-cta">Start free trial</a>
+        </div>
         
         {/* Menu Icon (Mobile) */}
         <button 
@@ -69,8 +74,8 @@ export default function Header() {
             <a href="/#faq" onClick={(e) => handleNavigation(e, '/', '#faq')}>FAQ</a>
             <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
             <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
-            <a href="https://app.aquarythu.com/" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Log in</a>
-            <a href="https://app.aquarythu.com/" onClick={() => setMenuOpen(false)}>Start Free</a>
+            <a href="https://app.aquarythu.com/login" onClick={() => setMenuOpen(false)}>Log in</a>
+            <a href="https://app.aquarythu.com/" onClick={() => setMenuOpen(false)}>Start free trial</a>
           </div>
         )}
       </div>
@@ -122,7 +127,45 @@ export default function Header() {
           color: #017FE3;
         }
 
+        .header-actions {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .header-login {
+          white-space: nowrap;
+          font-family: "Google Sans", sans-serif;
+          font-size: 15px;
+          font-weight: 600;
+          color: #0B1B33;
+          padding: 10px 14px;
+          border-radius: 10px;
+          transition: color 0.2s ease;
+        }
+
+        .header-login:hover {
+          color: #017FE3;
+        }
+
+        .header-cta {
+          font-family: "Google Sans", sans-serif;
+          font-size: 15px;
+          font-weight: 700;
+          color: #ffffff;
+          background: #017FE3;
+          padding: 10px 18px;
+          border-radius: 10px;
+          white-space: nowrap;
+          transition: background 0.2s ease;
+        }
+
+        .header-cta:hover {
+          background: #0068BD;
+        }
+
         .menu-button {
+          display: none !important;
           background: none;
           border: none;
           color: var(--color-text-main);
@@ -180,8 +223,30 @@ export default function Header() {
           .nav-links {
             display: none;
           }
+          .menu-button {
+            display: flex !important;
+          }
+          .header-actions {
+            margin-left: auto;
+            margin-right: 4px;
+            gap: 4px;
+          }
+          .header-login {
+            padding: 8px 8px;
+            font-size: 14px;
+          }
+          .header-cta {
+            padding: 8px 12px;
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .header-login {
+            display: none;
+          }
           .logo img {
-            height: 36px;
+            height: 32px;
           }
           .dropdown-menu {
             right: 24px;

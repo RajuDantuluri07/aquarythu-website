@@ -231,7 +231,7 @@ export default function HowItWorks() {
 
               <div className="hiw-cta-links">
                 <a href="/#features" className="btn-secondary">Explore Features</a>
-                <a href="https://app.aquarythu.com/" className="btn-primary">Start Free</a>
+                <a href="https://app.aquarythu.com/" className="btn-primary">Start free trial</a>
               </div>
             </div>
 
