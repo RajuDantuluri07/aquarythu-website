@@ -25,7 +25,9 @@ export default function Hero() {
         
         <div className="hero-visual">
           <img
-            src="/HERO1.png"
+            src="/hero-1200.webp"
+            srcSet="/hero-800.webp 800w, /hero-1200.webp 1200w, /hero-1669.webp 1669w"
+            sizes="(max-width: 600px) 100vw, 980px"
             alt="AquaRythu shrimp farm app on phone and tablet showing active ponds, biomass, feed today, survival rate and feed cost"
             width={1669}
             height={842}

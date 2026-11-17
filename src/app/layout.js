@@ -37,8 +37,8 @@ const jsonLd = {
       "logo": {
         "@type": "ImageObject",
         "url": `${SITE_URL}/logo.png`,
-        "width": 912,
-        "height": 273
+        "width": 320,
+        "height": 96
       },
       "email": SUPPORT_EMAIL,
       "areaServed": { "@type": "Country", "name": "India" },
@@ -59,7 +59,7 @@ const jsonLd = {
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "Aquaculture farm management",
       "inLanguage": ["en", "te", "hi", "ta", "bn", "gu", "ml", "or"],
-      "image": `${SITE_URL}/og-image.png`,
+      "image": `${SITE_URL}/og-image.jpg`,
       "publisher": { "@id": `${SITE_URL}/#organization` },
       "audience": { "@type": "Audience", "audienceType": "Shrimp farmers and aquaculture farm managers" },
       "featureList": [
