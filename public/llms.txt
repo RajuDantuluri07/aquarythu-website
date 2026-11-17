@@ -1,0 +1,28 @@
+# AquaRythu
+
+> AquaRythu is shrimp farm management software for Vannamei shrimp farmers in India. It is a digital farm log book for feed, tray checks, water quality, sampling, expenses and harvests, with Smart Feed recommendations, available in 8 Indian languages and usable offline.
+
+Key facts:
+
+- Product: web app at https://app.aquarythu.com/ that runs in any phone, tablet or computer browser. Free to start.
+- Built for: shrimp farm owners, supervisors and pond workers in India. Species supported today: Pacific white shrimp (Litopenaeus vannamei).
+- Languages: English, Telugu, Hindi, Tamil, Bengali, Gujarati, Malayalam, Odia.
+- Usage: 120+ farms, 360+ ponds and 798+ acres.
+- Feed: blind feed plan for the early days of culture (DOC 1–10 for nursery seed, DOC 1–30 for hatchery seed), then Smart Feed adjusts daily feed from tray observations, DOC, estimated biomass and feeding history.
+- Tracking: ABW, ADG, biomass, survival and FCR per pond; water quality (DO, pH, salinity, temperature, ammonia, nitrite); harvests and weighing; expenses, inventory and crop profitability.
+- Team: owners invite supervisors and workers with role-based access; financial data is owner-only.
+- Offline: records save on the device and sync when the connection returns.
+- Contact: support@aquarythu.com
+
+## Pages
+
+- [Home](https://aquarythu.com/): overview, features and FAQ
+- [How AquaRythu Works](https://aquarythu.com/how-it-works): step-by-step from farm setup to harvest and crop economics
+- [About](https://aquarythu.com/about): mission and product facts
+- [Contact](https://aquarythu.com/contact): support form and email
+
+## Legal
+
+- [Privacy Policy](https://aquarythu.com/privacy)
+- [Terms of Service](https://aquarythu.com/terms)
+- [Delete your account](https://aquarythu.com/delete-account)

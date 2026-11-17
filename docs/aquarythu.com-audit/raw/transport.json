@@ -1,0 +1,274 @@
+{
+  "url": "https://aquarythu.com",
+  "host": "aquarythu.com",
+  "tls": {
+    "host": "aquarythu.com",
+    "port": 443,
+    "connected_ip": "199.36.158.100",
+    "verified": true,
+    "verify_error": null,
+    "verify_code": null,
+    "certificate_read": true,
+    "subject": {
+      "common_name": "portal.momentoengenharia.com",
+      "organization": null
+    },
+    "issuer": {
+      "common_name": "WR3",
+      "organization": "Google Trust Services"
+    },
+    "not_before": "2026-11-10T03:47:45Z",
+    "not_after": "2027-02-08T04:44:57Z",
+    "days_until_expiry": 82,
+    "expired": false,
+    "not_yet_valid": false,
+    "san": [
+      "portal.momentoengenharia.com",
+      "www.axionfinance.ca",
+      "demo.dentlab.dentdesk.ch",
+      "artrium.ludibell.com",
+      "www.avag.org.in",
+      "fenixsolucoesemsaude.com.br",
+      "holidayjobs.ch",
+      "www.ivaralsharq.iq",
+      "harrintech.com",
+      "service-hours.shelton.academy",
+      "www.aigovsuite.ai",
+      "flagflagflag.com",
+      "gosafecabs.com",
+      "www.iamrajatgupta.com",
+      "logmim.com",
+      "www.by-senan.com",
+      "camarap.com",
+      "www.akashbinoyassociates.com",
+      "akashbinoyassociates.com",
+      "www.adjectives-for.com",
+      "www.flagflagflag.com",
+      "2021.hacklytics.io",
+      "www.barnpilot.ai",
+      "teeyuu.com",
+      "rowprism.com",
+      "play.brassliondistillery.com",
+      "parthalaw.com",
+      "campcrew.camp",
+      "app.farms-equipment.com",
+      "tsc-main.remotestate.com",
+      "tsc-dev.remotestate.com",
+      "www.teeyuu.com",
+      "www.parthalaw.com",
+      "www.forceonesoft.com",
+      "www.protectorguardrail.com",
+      "michi.veliymolfar.com",
+      "www.globemultitraders.com",
+      "demo.teeyuu.com",
+      "spartenz.in",
+      "pkapps.in",
+      "www.trustifydoc.com",
+      "recensies.informacion.my.id",
+      "www.era.builders",
+      "www.off-roadshows.com",
+      "improve-biz.com",
+      "venkateshbn.in",
+      "www.vreugdenhilfarm.com",
+      "dowefit.app",
+      "2c-works.com",
+      "revision.chiragbhatia.in",
+      "pipeline.avantifinance.in",
+      "www.clicktocall.in",
+      "cs2.ariqfraser.dev",
+      "www.gerty.quantcastle.com",
+      "vetri.page",
+      "tosela.mx",
+      "andcattle.llc",
+      "www.aboutour.love",
+      "happybati.com",
+      "trivia-dev.letsdive.io",
+      "mixup-insurance.com",
+      "novarapartners.org",
+      "rarepapers.org",
+      "growsticky.com",
+      "vltn.io",
+      "aquarythu.com",
+      "coolockardleascouts.ie",
+      "qualifly.co",
+      "docs.form.com",
+      "rubygreat.lol",
+      "mammaskokebok.no",
+      "www.nuvesolucoes.com.br",
+      "www.hosteleriabcn.com",
+      "hawkheadstudios.com",
+      "l.artpix3d.com",
+      "auth.audioaz.com",
+      "chorusbook.com",
+      "easedsoftware.com",
+      "dimitrigrangeon.com",
+      "earningsahead.com",
+      "medule.com",
+      "caldera-studios.is",
+      "sso.portal.airreadingclass.com",
+      "coffeelab.co",
+      "app.airtechrecords.com",
+      "auth.anterotrail.com",
+      "www.solards.com.au",
+      "nashscoring.com",
+      "lunafal.com",
+      "darkmane.darkmane.me",
+      "mynailscph.dk",
+      "wemayk.com",
+      "dev.resolved.social",
+      "www.pokymons.com",
+      "teacher.exit-sirin.yumistack.net",
+      "admin.sayarti.com",
+      "portal.mont.net.br",
+      "root-app.xerobug.com",
+      "pernambucanas.xptoconsig.com.br",
+      "fengcloud.surf"
+    ],
+    "san_count": 100,
+    "covers_host": true,
+    "sibling_host": "www.aquarythu.com",
+    "covers_sibling": false,
+    "protocol": "TLSv1.3",
+    "cipher": "TLS_AES_128_GCM_SHA256",
+    "cipher_bits": 128
+  },
+  "headers": {
+    "url": "https://aquarythu.com/",
+    "status": 200,
+    "https": true,
+    "hsts": {
+      "present": true,
+      "value": "max-age=31556926",
+      "max_age": 31556926,
+      "include_subdomains": false,
+      "preload": false,
+      "meets_preload_requirements": false,
+      "preload_gaps": [
+        "includeSubDomains is missing.",
+        "The preload directive is missing."
+      ],
+      "preload_scope_note": "Covers the header directives, the certificate and the same-host HTTP redirect when those sections ran. Not checked: that every subdomain serves HTTPS, and that this host is the registrable domain the preload list requires.",
+      "issues": [
+        "includeSubDomains is not set."
+      ]
+    },
+    "csp": {
+      "present": false,
+      "report_only": false,
+      "policies": 0,
+      "issues": [
+        "Content-Security-Policy was not sent."
+      ]
+    },
+    "x_content_type_options": {
+      "present": false,
+      "value": null,
+      "ok": false
+    },
+    "framing": {
+      "x_frame_options": null,
+      "frame_ancestors": false,
+      "ok": false
+    },
+    "referrer_policy": {
+      "present": false,
+      "value": null,
+      "ok": false
+    },
+    "permissions_policy": {
+      "present": false,
+      "feature_policy_present": false
+    },
+    "cookies": []
+  },
+  "redirects": {
+    "http_to_https": {
+      "checked_url": "http://aquarythu.com/",
+      "redirects_to_https": true,
+      "one_hop": true,
+      "first_hop_status": 301,
+      "first_hop_target": "https://aquarythu.com/",
+      "first_hop_same_host": true,
+      "permanent": true,
+      "hops": 1,
+      "final_url": "https://aquarythu.com/",
+      "error": null
+    },
+    "www": {
+      "host": "aquarythu.com",
+      "sibling_host": "www.aquarythu.com",
+      "host_final_url": "https://aquarythu.com/",
+      "sibling_final_url": "https://www.aquarythu.com/",
+      "sibling_resolves": true,
+      "sibling_tls_error": false,
+      "same_final_url": false,
+      "error": null
+    }
+  },
+  "findings": [
+    {
+      "id": "www-not-consolidated",
+      "severity": "Medium",
+      "message": "The www and non-www hosts end on different URLs.",
+      "evidence": {
+        "host": "aquarythu.com",
+        "sibling_host": "www.aquarythu.com",
+        "host_final_url": "https://aquarythu.com/",
+        "sibling_final_url": "https://www.aquarythu.com/"
+      }
+    },
+    {
+      "id": "hsts-weak",
+      "severity": "Low",
+      "message": "The Strict-Transport-Security header is weak.",
+      "evidence": {
+        "value": "max-age=31556926",
+        "issues": [
+          "includeSubDomains is not set."
+        ]
+      }
+    },
+    {
+      "id": "csp-missing",
+      "severity": "Low",
+      "message": "No Content-Security-Policy header is sent.",
+      "evidence": {}
+    },
+    {
+      "id": "nosniff-missing",
+      "severity": "Low",
+      "message": "X-Content-Type-Options is not set to nosniff.",
+      "evidence": {
+        "value": null
+      }
+    },
+    {
+      "id": "clickjacking-protection-missing",
+      "severity": "Low",
+      "message": "The effective response headers do not restrict framing to specific origins.",
+      "evidence": {
+        "x_frame_options": null
+      }
+    },
+    {
+      "id": "referrer-policy-missing",
+      "severity": "Info",
+      "message": "No Referrer-Policy header is sent, so the browser default applies.",
+      "evidence": {}
+    },
+    {
+      "id": "permissions-policy-missing",
+      "severity": "Info",
+      "message": "No Permissions-Policy header is sent.",
+      "evidence": {}
+    }
+  ],
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 1,
+    "Low": 4,
+    "Info": 2,
+    "total": 7
+  }
+}

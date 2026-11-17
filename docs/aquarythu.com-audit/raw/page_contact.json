@@ -1,0 +1,133 @@
+{
+  "url": "https://aquarythu.com/contact",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Digital Log Book & Software for Shrimp Farms | AquaRythu",
+    "title_length": 56,
+    "title_count": 1,
+    "meta_description": "AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records.",
+    "meta_description_length": 161,
+    "h1": [
+      "Contact Us"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 1,
+    "canonical": "https://aquarythu.com",
+    "canonical_status": "other",
+    "canonical_note": null,
+    "meta_robots": null,
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 2,
+      "missing_alt": 0,
+      "empty_alt": 0,
+      "missing_dimensions": 2,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 12,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 29,
+      "query_params": []
+    },
+    "html_bytes": 21823,
+    "dom": {
+      "nodes": 100,
+      "max_depth": 9,
+      "max_children": 32,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "AquaRythu | Smart Farm Management Software for Shrimp Farmers",
+      "og:description": "AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records.",
+      "og:url": "https://aquarythu.com",
+      "og:site_name": "AquaRythu",
+      "og:locale": "en_US",
+      "og:type": "website"
+    },
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "word_count": 30,
+    "words_measured": true,
+    "title_relevance": 0.29,
+    "description_relevance": 0.06,
+    "canonical_probe": {
+      "status_code": 200,
+      "final_url": "https://aquarythu.com/",
+      "redirects": 0,
+      "redirects_back_to_page": false
+    }
+  },
+  "findings": [
+    {
+      "id": "canonical-points-elsewhere",
+      "severity": "High",
+      "message": "The canonical names a different URL, so this page asks search engines to index that URL instead. Confirm this is intended.",
+      "evidence": "canonical https://aquarythu.com vs page https://aquarythu.com/contact (a trailing slash difference alone is tolerated)"
+    },
+    {
+      "id": "meta-description-too-long",
+      "severity": "Medium",
+      "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "161 characters: AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records."
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "2 of 2 images: /logo.png, /logo-white.png",
+      "count": 2
+    },
+    {
+      "id": "thin-content",
+      "severity": "Medium",
+      "message": "The page has fewer than 200 words of visible body text. Google has no minimum word count, so this is not a ranking rule. Check that the page fully answers what a visitor came for.",
+      "evidence": "30 words of visible body text"
+    },
+    {
+      "id": "missing-og-image",
+      "severity": "Low",
+      "message": "The page has no og:image, so shared links show no preview image.",
+      "evidence": "og:title is present, og:image is not"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 1,
+    "Medium": 3,
+    "Low": 1,
+    "total": 5,
+    "checks_run": 47
+  }
+}

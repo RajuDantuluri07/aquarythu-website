@@ -4,30 +4,49 @@ import { useState } from 'react';
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // Answer-engine friendly: each answer opens with a direct one-sentence
+  // answer and stands on its own without the question. Keep every claim true
+  // for the live product; pricing details live in the app, not here.
   const faqs = [
     {
-      question: "What is AquaRythu™?",
-      answer: "AquaRythu™ is a shrimp farming platform that helps reduce feed waste, improve growth, and increase farm profitability."
+      question: "What is AquaRythu?",
+      answer: "AquaRythu is shrimp farm management software for shrimp farmers in India. It replaces the paper farm log book with digital records of feed, tray checks, water quality, sampling, expenses and harvests for every pond, and uses that data to give Smart Feed recommendations."
     },
     {
-      question: "Does the app work offline?",
-      answer: "Yes. You can record feed rounds, tray checks, and sampling data without internet. Data is stored locally and synced automatically once you're back online."
+      question: "Which shrimp species does AquaRythu support?",
+      answer: "AquaRythu currently supports Pacific white shrimp (Litopenaeus vannamei). Its feed plans, growth tracking and FCR calculations are built for Vannamei culture."
     },
     {
-      question: "What is the difference between Blind Feed and Smart Feed?",
-      answer: "Blind Feed is a fixed feeding schedule used in early stages (DOC 1-30). Smart Feed is our engine that provides adaptive recommendations based on tray observations and pond data."
+      question: "Is AquaRythu free to use?",
+      answer: "Yes, you can start free at app.aquarythu.com. Daily pond records and Smart Feed are free; paid plans add advanced reports and analytics for larger farms."
     },
     {
-      question: "What are the benefits of the PRO plan?",
-      answer: "PRO unlocks the Smart Feed Engine, adaptive recommendations, tray intelligence, growth tracking, unlimited ponds, and PDF reports."
+      question: "What is the difference between blind feeding and Smart Feed?",
+      answer: "Blind feeding is a fixed feed plan for the early days of culture, before tray readings are reliable: DOC 1–10 for nursery-raised seed and DOC 1–30 for hatchery seed. After that, Smart Feed adjusts each day's feed using tray observations, days of culture (DOC), estimated biomass and recent feeding history."
     },
     {
-      question: "Can I manage multiple ponds?",
-      answer: "Yes. The number of ponds available depends on your subscription plan, with PRO offering unlimited pond management."
+      question: "How does AquaRythu calculate FCR?",
+      answer: "FCR (feed conversion ratio) is the total feed given divided by the shrimp biomass produced. AquaRythu calculates it automatically from your logged feed rounds and sampling data (average body weight and survival), so you can see FCR for each pond during the crop and at harvest."
     },
     {
-      question: "How are feed recommendations generated?",
-      answer: "Recommendations are dynamically generated based on pond phase, DOC (Day of Culture), historical feeding data, and daily tray observations."
+      question: "Does the AquaRythu app work offline?",
+      answer: "Yes. You can record feed rounds, tray checks and sampling at the pond without internet. Records are saved on the phone and sync automatically when the connection returns."
+    },
+    {
+      question: "Which languages does AquaRythu support?",
+      answer: "AquaRythu is available in 8 languages: English, Telugu, Hindi, Tamil, Bengali, Gujarati, Malayalam and Odia."
+    },
+    {
+      question: "Can my farm team use AquaRythu?",
+      answer: "Yes. Farm owners can invite supervisors and workers by email, and each person gets role-based access. Workers can be limited to the ponds they are assigned to, and financial information stays restricted to the owner."
+    },
+    {
+      question: "Can I manage multiple farms and ponds?",
+      answer: "Yes. You can add several farms, each with multiple ponds, and track every pond's crop separately. The number of farms and ponds you can add depends on your plan."
+    },
+    {
+      question: "Which devices does AquaRythu run on?",
+      answer: "AquaRythu runs in the web browser of any smartphone, tablet or computer at app.aquarythu.com, with no installation needed."
     }
   ];
 
@@ -57,7 +76,7 @@ export default function FAQ() {
       <div className="container">
         <div className="faq-header">
           <h2>Frequently Asked Questions</h2>
-          <p>Everything you need to know about AquaRythu™.</p>
+          <p>Answers to common questions about AquaRythu shrimp farm management software.</p>
         </div>
 
         <div className="faq-list">
@@ -66,16 +85,22 @@ export default function FAQ() {
               key={index} 
               className={`faq-item ${openIndex === index ? 'active' : ''}`}
             >
-              <button 
-                className="faq-question" 
-                onClick={() => toggleFAQ(index)}
-              >
-                {faq.question}
-                <span className="faq-icon">{openIndex === index ? '−' : '+'}</span>
-              </button>
-              <div 
-                className="faq-answer-wrapper" 
-                style={{ maxHeight: openIndex === index ? '200px' : '0' }}
+              <h3 className="faq-heading">
+                <button
+                  type="button"
+                  className="faq-question"
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-answer-${index}`}
+                  onClick={() => toggleFAQ(index)}
+                >
+                  {faq.question}
+                  <span className="faq-icon" aria-hidden="true">{openIndex === index ? '−' : '+'}</span>
+                </button>
+              </h3>
+              <div
+                id={`faq-answer-${index}`}
+                className="faq-answer-wrapper"
+                style={{ maxHeight: openIndex === index ? '600px' : '0' }}
               >
                 <div className="faq-answer">
                   {faq.answer}
@@ -140,7 +165,13 @@ export default function FAQ() {
           box-shadow: 0 4px 20px rgba(1, 127, 227, 0.1);
         }
 
+        .faq-heading {
+          margin: 0;
+          font-size: inherit;
+        }
+
         .faq-question {
+          font-family: inherit;
           width: 100%;
           text-align: left;
           padding: 24px;

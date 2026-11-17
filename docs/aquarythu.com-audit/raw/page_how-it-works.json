@@ -1,0 +1,109 @@
+{
+  "url": "https://aquarythu.com/how-it-works",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "How AquaRythu Works | Shrimp Farm Management Software",
+    "title_length": 53,
+    "title_count": 1,
+    "meta_description": "See how AquaRythu helps shrimp farmers manage ponds, feed, water quality, sampling, harvests and farm records in one platform.",
+    "meta_description_length": 126,
+    "h1": [
+      "How AquaRythu Works"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 0,
+    "canonical": "https://aquarythu.com/how-it-works",
+    "canonical_status": "self",
+    "canonical_note": null,
+    "meta_robots": null,
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 2,
+      "missing_alt": 0,
+      "empty_alt": 0,
+      "missing_dimensions": 2,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 15,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 34,
+      "query_params": []
+    },
+    "html_bytes": 53026,
+    "dom": {
+      "nodes": 234,
+      "max_depth": 10,
+      "max_children": 31,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "How AquaRythu Works | Shrimp Farm Management Software",
+      "og:description": "See how AquaRythu helps shrimp farmers manage ponds, feed, water quality, sampling, harvests and farm records in one platform.",
+      "og:url": "https://aquarythu.com/how-it-works",
+      "og:site_name": "AquaRythu",
+      "og:locale": "en_US",
+      "og:type": "website"
+    },
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "word_count": 916,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.87
+  },
+  "findings": [
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "2 of 2 images: /logo.png, /logo-white.png",
+      "count": 2
+    },
+    {
+      "id": "missing-og-image",
+      "severity": "Low",
+      "message": "The page has no og:image, so shared links show no preview image.",
+      "evidence": "og:title is present, og:image is not"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 1,
+    "Low": 1,
+    "total": 2,
+    "checks_run": 47
+  }
+}

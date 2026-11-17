@@ -24,9 +24,13 @@ export default function Hero() {
         </div>
         
         <div className="hero-visual">
-          <img 
-            src="/HERO1.png" 
-            alt="AquaRythu Dashboard" 
+          <img
+            src="/HERO1.png"
+            alt="AquaRythu shrimp farm app on phone and tablet showing active ponds, biomass, feed today, survival rate and feed cost"
+            width={1669}
+            height={842}
+            fetchPriority="high"
+            decoding="async"
             className="hero-img-combined"
           />
         </div>

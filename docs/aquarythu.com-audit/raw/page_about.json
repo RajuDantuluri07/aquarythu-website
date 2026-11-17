@@ -1,0 +1,134 @@
+{
+  "url": "https://aquarythu.com/about",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "About Us | AquaRythu\u2122",
+    "title_length": 21,
+    "title_count": 1,
+    "meta_description": "Learn more about AquaRythu and our mission to revolutionize shrimp farming.",
+    "meta_description_length": 75,
+    "h1": [
+      "About Us"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 1,
+    "template_heading_level_skips": 0,
+    "canonical": "https://aquarythu.com",
+    "canonical_status": "other",
+    "canonical_note": null,
+    "meta_robots": null,
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 2,
+      "missing_alt": 0,
+      "empty_alt": 0,
+      "missing_dimensions": 2,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 13,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 27,
+      "query_params": []
+    },
+    "html_bytes": 24981,
+    "dom": {
+      "nodes": 94,
+      "max_depth": 9,
+      "max_children": 31,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "AquaRythu | Smart Farm Management Software for Shrimp Farmers",
+      "og:description": "AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records.",
+      "og:url": "https://aquarythu.com",
+      "og:site_name": "AquaRythu",
+      "og:locale": "en_US",
+      "og:type": "website"
+    },
+    "jsonld_blocks": 1,
+    "jsonld_invalid": 0,
+    "word_count": 201,
+    "words_measured": true,
+    "title_relevance": 1.0,
+    "description_relevance": 0.67,
+    "canonical_probe": {
+      "status_code": 200,
+      "final_url": "https://aquarythu.com/",
+      "redirects": 0,
+      "redirects_back_to_page": false
+    }
+  },
+  "findings": [
+    {
+      "id": "canonical-points-elsewhere",
+      "severity": "High",
+      "message": "The canonical names a different URL, so this page asks search engines to index that URL instead. Confirm this is intended.",
+      "evidence": "canonical https://aquarythu.com vs page https://aquarythu.com/about (a trailing slash difference alone is tolerated)"
+    },
+    {
+      "id": "title-too-short",
+      "severity": "Medium",
+      "message": "The title is shorter than 30 characters. A very short title rarely describes the page well enough to earn a click. This is a heuristic, not a search engine rule.",
+      "evidence": "21 characters: About Us | AquaRythu\u2122"
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "2 of 2 images: /logo.png, /logo-white.png",
+      "count": 2
+    },
+    {
+      "id": "heading-level-skip",
+      "severity": "Low",
+      "message": "Heading levels skip inside the main content, for example from H2 to H4. Google Search does not mind heading order, but screen reader users move through a page by heading level.",
+      "evidence": "1 skipped heading level(s) in the main content",
+      "count": 1
+    },
+    {
+      "id": "missing-og-image",
+      "severity": "Low",
+      "message": "The page has no og:image, so shared links show no preview image.",
+      "evidence": "og:title is present, og:image is not"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 1,
+    "Medium": 2,
+    "Low": 2,
+    "total": 5,
+    "checks_run": 47
+  }
+}

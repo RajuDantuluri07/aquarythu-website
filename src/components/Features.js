@@ -10,7 +10,7 @@ export default function Features() {
       features: [
         {
           title: "Blind Feed Generation",
-          desc: "Generate a ready-to-use 25-day feed plan based on pond setup and seed details.",
+          desc: "Get a ready-to-use feed plan for the early days of culture (DOC 1–10 for nursery seed, DOC 1–30 for hatchery seed) based on pond and seed details.",
           icon: (
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
@@ -130,7 +130,7 @@ export default function Features() {
     }
   ];
 
-  const currentCategory = categories.find(cat => cat.id === activeTab);
+  const panelId = (id) => `features-panel-${id.replace(/[^a-z]+/gi, '-').toLowerCase()}`;
 
   return (
     <section className="features-section" id="features">
@@ -141,10 +141,15 @@ export default function Features() {
         </div>
         
         <div className="features-tabs-container">
-          <div className="features-tabs">
+          <div className="features-tabs" role="tablist" aria-label="Feature categories">
             {categories.map((category) => (
               <button
                 key={category.id}
+                type="button"
+                role="tab"
+                id={`${panelId(category.id)}-tab`}
+                aria-selected={activeTab === category.id}
+                aria-controls={panelId(category.id)}
                 className={`tab-btn ${activeTab === category.id ? 'active' : ''}`}
                 onClick={() => setActiveTab(category.id)}
               >
@@ -154,9 +159,19 @@ export default function Features() {
           </div>
         </div>
 
+        {/* Every panel is rendered into the static HTML so crawlers and AI
+            answer engines see all features; inactive panels are only hidden. */}
         <div className="features-grid-wrapper">
-          <div className="features-grid" key={activeTab}>
-            {currentCategory.features.map((feature, index) => (
+          {categories.map((category) => (
+          <div
+            className="features-grid"
+            key={category.id}
+            id={panelId(category.id)}
+            role="tabpanel"
+            aria-labelledby={`${panelId(category.id)}-tab`}
+            hidden={activeTab !== category.id}
+          >
+            {category.features.map((feature, index) => (
               <div className="feature-card" key={index}>
                 <div className="feature-card-header">
                   <div className="feature-icon">
@@ -170,6 +185,7 @@ export default function Features() {
               </div>
             ))}
           </div>
+          ))}
         </div>
       </div>
 
@@ -259,6 +275,10 @@ export default function Features() {
           grid-template-columns: repeat(2, 1fr);
           gap: 24px;
           animation: fadeSlideUp 0.4s ease forwards;
+        }
+
+        .features-grid[hidden] {
+          display: none;
         }
 
         @keyframes fadeSlideUp {
