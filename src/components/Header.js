@@ -30,7 +30,7 @@ export default function Header() {
     <header className="header">
       <div className="container header-container">
         <a href="/" className="logo">
-          <img src="/logo.png" alt="AquaRythu Logo" />
+          <img src="/logo.png" alt="AquaRythu" width={160} height={48} />
         </a>
         
         <nav className="nav-links">

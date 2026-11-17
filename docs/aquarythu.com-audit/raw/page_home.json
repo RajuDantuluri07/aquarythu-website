@@ -1,0 +1,115 @@
+{
+  "url": "https://aquarythu.com/",
+  "source": "url",
+  "status_code": 200,
+  "headers_available": true,
+  "facts": {
+    "title": "Digital Log Book & Software for Shrimp Farms | AquaRythu",
+    "title_length": 56,
+    "title_count": 1,
+    "meta_description": "AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records.",
+    "meta_description_length": 161,
+    "h1": [
+      "Smart Shrimp Farming App Built for Shrimp Farmers"
+    ],
+    "h1_count": 1,
+    "heading_level_skips": 0,
+    "template_heading_level_skips": 1,
+    "canonical": "https://aquarythu.com",
+    "canonical_status": "self",
+    "canonical_note": "differs from the page URL only by a trailing slash, treated as self-referencing",
+    "meta_robots": null,
+    "x_robots_tag": null,
+    "x_robots_other_agents": [],
+    "hreflang_count": 0,
+    "lang": "en",
+    "has_doctype": true,
+    "meta_charset": "utf-8",
+    "header_charset": "utf-8",
+    "has_viewport": true,
+    "images": {
+      "total": 3,
+      "missing_alt": 0,
+      "empty_alt": 0,
+      "missing_dimensions": 3,
+      "first_image_lazy": false
+    },
+    "links": {
+      "total": 14,
+      "without_text": 0,
+      "generic_anchor": 0,
+      "http_on_https": 0
+    },
+    "mixed_content": 0,
+    "url": {
+      "length": 22,
+      "query_params": []
+    },
+    "html_bytes": 51912,
+    "dom": {
+      "nodes": 197,
+      "max_depth": 12,
+      "max_children": 32,
+      "widest_element": "head"
+    },
+    "open_graph": {
+      "og:title": "AquaRythu | Smart Farm Management Software for Shrimp Farmers",
+      "og:description": "AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records.",
+      "og:url": "https://aquarythu.com",
+      "og:site_name": "AquaRythu",
+      "og:locale": "en_US",
+      "og:type": "website"
+    },
+    "jsonld_blocks": 2,
+    "jsonld_invalid": 0,
+    "word_count": 293,
+    "words_measured": true,
+    "title_relevance": 0.57,
+    "description_relevance": 0.78
+  },
+  "findings": [
+    {
+      "id": "meta-description-too-long",
+      "severity": "Medium",
+      "message": "The meta description is longer than 160 characters and may be truncated in results. This is a display heuristic, not a published search engine limit.",
+      "evidence": "161 characters: AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records."
+    },
+    {
+      "id": "images-missing-dimensions",
+      "severity": "Medium",
+      "message": "Some images have no width and height attributes, which lets the layout shift while they load.",
+      "evidence": "3 of 3 images: /logo.png, /HERO1.png, /logo-white.png",
+      "count": 3
+    },
+    {
+      "id": "missing-og-image",
+      "severity": "Low",
+      "message": "The page has no og:image, so shared links show no preview image.",
+      "evidence": "og:title is present, og:image is not"
+    }
+  ],
+  "not_checked": [],
+  "thresholds": {
+    "title_min_chars": 30,
+    "title_max_chars": 60,
+    "meta_description_min_chars": 120,
+    "meta_description_max_chars": 160,
+    "url_max_chars": 100,
+    "html_max_bytes": 2000000,
+    "thin_content_min_words": 200,
+    "dom_max_depth": 32,
+    "dom_max_children": 60,
+    "title_relevance_min": 0.3,
+    "description_relevance_min": 0.2,
+    "relevance_min_words": 50,
+    "evidence_max_chars": 200
+  },
+  "summary": {
+    "Critical": 0,
+    "High": 0,
+    "Medium": 2,
+    "Low": 1,
+    "total": 3,
+    "checks_run": 47
+  }
+}

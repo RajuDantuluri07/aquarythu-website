@@ -1,62 +1,91 @@
 import "./globals.css";
+import { SITE_URL, SITE_NAME, SUPPORT_EMAIL, APP_URL, pageMetadata } from "@/lib/site";
+
+const HOME_DESCRIPTION =
+  "Shrimp farm management app for Vannamei farmers in India. Record feed, trays, water quality, sampling and harvests, and get Smart Feed advice in 8 languages.";
 
 export const metadata = {
-  title: "Digital Log Book & Software for Shrimp Farms | AquaRythu",
-  description: "AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records.",
-  keywords: "shrimp farm management software, aquaculture software, aqua farm management software, shrimp farm app, pond management software, shrimp farm log book, aquaculture farm management",
-  metadataBase: new URL('https://aquarythu.com'),
-  alternates: {
-    canonical: '/',
-  },
-  openGraph: {
-    title: 'AquaRythu | Smart Farm Management Software for Shrimp Farmers',
-    description: 'AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records.',
-    url: 'https://aquarythu.com',
-    siteName: 'AquaRythu',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'AquaRythu | Smart Farm Management Software for Shrimp Farmers',
-    description: 'AquaRythu is an aqua farm management software that helps shrimp farmers manage ponds, feed, water quality, sampling, expenses, harvests and digital farm records.',
-  },
+  metadataBase: new URL(SITE_URL),
+  ...pageMetadata({
+    title: "Shrimp Farm Management App & Digital Log Book | AquaRythu",
+    description: HOME_DESCRIPTION,
+    path: '/',
+  }),
+  applicationName: SITE_NAME,
+  keywords: "shrimp farm management software, aquaculture software, aqua farm management software, shrimp farm app, pond management software, shrimp farm log book, vannamei feed management app, shrimp FCR tracking",
+};
+
+const LANGUAGES = ["English", "Telugu", "Hindi", "Tamil", "Bengali", "Gujarati", "Malayalam", "Odia"];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_URL}/#website`,
+      "url": `${SITE_URL}/`,
+      "name": SITE_NAME,
+      "description": "Shrimp farm management software for aquaculture farmers",
+      "inLanguage": "en-IN",
+      "publisher": { "@id": `${SITE_URL}/#organization` }
+    },
+    {
+      "@type": "Organization",
+      "@id": `${SITE_URL}/#organization`,
+      "name": SITE_NAME,
+      "url": `${SITE_URL}/`,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/logo.png`,
+        "width": 912,
+        "height": 273
+      },
+      "email": SUPPORT_EMAIL,
+      "areaServed": { "@type": "Country", "name": "India" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": SUPPORT_EMAIL,
+        "availableLanguage": LANGUAGES
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": `${SITE_URL}/#app`,
+      "name": SITE_NAME,
+      "url": APP_URL,
+      "description": HOME_DESCRIPTION,
+      "operatingSystem": "Web browser",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Aquaculture farm management",
+      "inLanguage": ["en", "te", "hi", "ta", "bn", "gu", "ml", "or"],
+      "image": `${SITE_URL}/og-image.png`,
+      "publisher": { "@id": `${SITE_URL}/#organization` },
+      "audience": { "@type": "Audience", "audienceType": "Shrimp farmers and aquaculture farm managers" },
+      "featureList": [
+        "Blind feed plan for the early days of culture",
+        "Smart Feed recommendations from tray checks, biomass and DOC",
+        "Water quality records (DO, pH, salinity, temperature, ammonia, nitrite)",
+        "Sampling, ABW, ADG, survival and FCR tracking",
+        "Harvest and weighing records",
+        "Expense, inventory and crop profitability tracking",
+        "Role-based access for owners, supervisors and workers",
+        "Offline recording with automatic sync"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "name": "Free plan",
+        "price": "0",
+        "priceCurrency": "INR",
+        "url": APP_URL
+      }
+    }
+  ]
 };
 
 export default function RootLayout({ children }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://aquarythu.com/#website",
-        "url": "https://aquarythu.com/",
-        "name": "AquaRythu",
-        "description": "Smart Farm Management Software for Shrimp Farmers"
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://aquarythu.com/#organization",
-        "name": "AquaRythu",
-        "url": "https://aquarythu.com/",
-        "logo": "https://aquarythu.com/logo.png"
-      },
-      {
-        "@type": "SoftwareApplication",
-        "name": "AquaRythu",
-        "operatingSystem": "Android",
-        "applicationCategory": "BusinessApplication",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
-      }
-    ]
-  };
-
   return (
-    <html lang="en">
+    <html lang="en-IN">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

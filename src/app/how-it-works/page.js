@@ -1,32 +1,31 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { pageMetadata, SITE_URL } from '@/lib/site';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "How AquaRythu Works | Shrimp Farm Management Software",
   description: "See how AquaRythu helps shrimp farmers manage ponds, feed, water quality, sampling, harvests and farm records in one platform.",
-  alternates: {
-    canonical: '/how-it-works',
-  },
-  openGraph: {
-    title: 'How AquaRythu Works | Shrimp Farm Management Software',
-    description: 'See how AquaRythu helps shrimp farmers manage ponds, feed, water quality, sampling, harvests and farm records in one platform.',
-    url: 'https://aquarythu.com/how-it-works',
-    siteName: 'AquaRythu',
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'How AquaRythu Works | Shrimp Farm Management Software',
-    description: 'See how AquaRythu helps shrimp farmers manage ponds, feed, water quality, sampling, harvests and farm records in one platform.',
-  },
+  path: '/how-it-works',
+});
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
+    { "@type": "ListItem", "position": 2, "name": "How It Works", "item": `${SITE_URL}/how-it-works` }
+  ]
 };
 
 export default function HowItWorks() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Header />
-      
+
       {/* Minimal Breadcrumb */}
       <div className="breadcrumb-container container">
         <nav aria-label="breadcrumb">
