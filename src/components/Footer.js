@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-brand">
-            <img src="/logo-white.png" alt="AquaRythu" width={144} height={48} style={{ height: '48px', width: 'auto', marginBottom: '12px' }} />
+            <img src="/logo-white.png" alt="AquaRythu" width={144} height={48} loading="lazy" decoding="async" style={{ height: '48px', width: 'auto', marginBottom: '12px' }} />
             <p>Shrimp farm management software for India.</p>
           </div>
           <div className="footer-links">

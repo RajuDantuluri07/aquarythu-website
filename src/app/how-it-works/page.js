@@ -283,7 +283,7 @@ export default function HowItWorks() {
         }
 
         .hiw-header h1 {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 42px;
           line-height: 1.15;
           font-weight: 600;
@@ -293,7 +293,7 @@ export default function HowItWorks() {
         }
 
         .hiw-subtitle {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 18px;
           line-height: 28px;
           font-weight: 400;
@@ -302,7 +302,7 @@ export default function HowItWorks() {
         }
 
         .hiw-intro {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 16px;
           line-height: 26px;
           font-weight: 400;
@@ -330,7 +330,7 @@ export default function HowItWorks() {
         }
 
         .hiw-step-card h2 {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 24px;
           font-weight: 600;
           color: #0B1B33;
@@ -338,7 +338,7 @@ export default function HowItWorks() {
         }
 
         .hiw-step-card p {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 16px;
           line-height: 26px;
           font-weight: 400;
@@ -351,7 +351,7 @@ export default function HowItWorks() {
         }
 
         .hiw-step-card ul {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 16px;
           line-height: 26px;
           font-weight: 400;
@@ -373,7 +373,7 @@ export default function HowItWorks() {
         }
 
         .hiw-summary-box h2 {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 32px;
           font-weight: 600;
           letter-spacing: -0.5px;
@@ -382,7 +382,7 @@ export default function HowItWorks() {
         }
 
         .hiw-summary-intro {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 16px;
           line-height: 26px;
           font-weight: 400;
@@ -407,7 +407,7 @@ export default function HowItWorks() {
         }
 
         .flow-step h3 {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 18px;
           font-weight: 600;
           color: #017FE3;
@@ -415,7 +415,7 @@ export default function HowItWorks() {
         }
 
         .flow-step p {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 16px;
           line-height: 26px;
           font-weight: 400;

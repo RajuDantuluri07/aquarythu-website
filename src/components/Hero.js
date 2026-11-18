@@ -32,7 +32,6 @@ export default function Hero() {
             width={1669}
             height={842}
             fetchPriority="high"
-            decoding="async"
             className="hero-img-combined"
           />
         </div>
@@ -114,7 +113,7 @@ export default function Hero() {
           max-width: 100%;
           text-align: center;
           overflow-wrap: break-word;
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 60px;
           line-height: 1.18;
           font-weight: 600; 
@@ -139,7 +138,7 @@ export default function Hero() {
           margin-right: auto;
           text-align: center;
           overflow-wrap: break-word;
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 18px;
           line-height: 28px;
           color: #52647A;
@@ -201,7 +200,7 @@ export default function Hero() {
         }
 
         .stat-number {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 36px;
           font-weight: 700;
           color: #017FE3;
@@ -209,7 +208,7 @@ export default function Hero() {
         }
 
         .stat-label {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 13px;
           font-weight: 600;
           color: #52647A;

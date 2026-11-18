@@ -1,3 +1,4 @@
+import { Google_Sans } from "next/font/google";
 import "./globals.css";
 import { SITE_URL, SITE_NAME, SUPPORT_EMAIL, APP_URL, pageMetadata } from "@/lib/site";
 
@@ -83,14 +84,19 @@ const jsonLd = {
   ]
 };
 
+// Self-hosted Google Sans (served from aquarythu.com, preloaded, swap). Was a
+// render-blocking stylesheet from fonts.googleapis.com that held up first
+// paint and therefore the hero image (LCP). Variable font, weights 400–700;
+// the site uses no italics. Components use var(--font-main).
+const googleSans = Google_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-google-sans",
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-IN">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en-IN" className={googleSans.variable}>
       <body>
         <script
           type="application/ld+json"
