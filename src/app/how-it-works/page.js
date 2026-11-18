@@ -17,12 +17,45 @@ const breadcrumbJsonLd = {
   ]
 };
 
+const HOW_TO_STEPS = [
+  { name: "Create Your Farm", text: "Create your farm and add its details, location, and infrastructure to set up your digital workspace." },
+  { name: "Set Up Your Ponds & Crop", text: "Add your ponds and record pond dimensions, stocking density, seed details, and crop dates." },
+  { name: "Manage Daily Farm Operations", text: "Record feed activities, tray observations, water-quality tests, sampling, supplement activities, and pond observations as permanent digital farm records." },
+  { name: "Manage Feed with Intelligence", text: "Track planned and actual feed distributions using a smart feeding workflow based on Days of Culture (DOC), biomass, and tray observations." },
+  { name: "Monitor Water Quality", text: "Record dissolved oxygen, pH, salinity, temperature, ammonia, and nitrite at the pond level to track long-term changes." },
+  { name: "Get Farm & Environmental Intelligence", text: "See weather, temperature trends, water-quality conditions, and feed-related advisories alongside your farm records." },
+  { name: "Track Sampling, Growth & FCR", text: "Record sampling data to track Average Body Weight (ABW), Average Daily Growth (ADG), biomass, survival, and FCR." },
+  { name: "Work Together with Your Farm Team", text: "Give owners, supervisors, and workers role-based access to the pond, feed, tray, water-quality, and sampling data they need." },
+  { name: "Manage Farm Expenses & Business Information", text: "Connect feed, farm costs, crop performance, harvest, and revenue so you can see your crop economics in one place." },
+  { name: "Manage Supplements & Farm Inputs", text: "Record supplement and farm-input activities as part of the crop's operational history, tied to the pond and crop." },
+  { name: "Manage Harvest", text: "Record harvest quantity, sizes, selling information, market price, and overall crop performance at the end of the crop." },
+  { name: "Generate Crop Reports", text: "Automatically turn feed history, growth and survival, water-quality trends, harvest yields, and expenses into organized crop reports." },
+];
+
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How AquaRythu Works",
+  "description": "How shrimp farmers set up a farm and manage daily operations, feed, water quality, sampling, harvest, and reports in AquaRythu.",
+  "step": HOW_TO_STEPS.map((step, i) => ({
+    "@type": "HowToStep",
+    "position": i + 1,
+    "name": step.name,
+    "text": step.text,
+    "url": `${SITE_URL}/how-it-works#step-${i + 1}`,
+  })),
+};
+
 export default function HowItWorks() {
   return (
     <main>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
       <Header />
 
@@ -51,21 +84,21 @@ export default function HowItWorks() {
           <div className="hiw-content">
             <div className="hiw-steps">
               
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-1">
                 <h2>1. Create Your Farm</h2>
                 <p>Start by creating your farm and setting up the basic information needed to manage your operation.</p>
                 <p>Add your farm details, location, and infrastructure to create your digital workspace.</p>
                 <p>From there, AquaRythu becomes the central place for your digital farm records, pond activities, crop information, and reports.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-2">
                 <h2>2. Set Up Your Ponds & Crop</h2>
                 <p>Add your ponds and configure the information needed to properly manage each crop.</p>
                 <p>Record details such as pond dimensions, stocking density, seed details, and crop dates.</p>
                 <p>Each pond gets its own operational view, making pond management easier and helping you understand exactly what is happening across your entire farm.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-3">
                 <h2>3. Manage Daily Farm Operations</h2>
                 <p>AquaRythu brings your everyday farm activities into one streamlined workflow.</p>
                 <p>Record important operational activities such as:</p>
@@ -80,14 +113,14 @@ export default function HowItWorks() {
                 <p>Instead of relying on scattered notebooks, spreadsheets, or messages, your farm information stays securely organized as permanent digital farm records.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-4">
                 <h2>4. Manage Feed with Intelligence</h2>
                 <p>Feed is one of the most significant costs in shrimp farming.</p>
                 <p>AquaRythu helps farmers manage planned and actual feed distributions throughout the crop. The smart feeding workflow considers crop information, Days of Culture (DOC), biomass, and tray observations to help farmers make more informed feeding decisions.</p>
                 <p>Record feeding rounds and tray observations directly in the app to build a continuous history of feed management. This creates a digital farm log book of what was planned, what was given, and how the pond responded.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-5">
                 <h2>5. Monitor Water Quality</h2>
                 <p>Water conditions can change quickly during a shrimp crop.</p>
                 <p>Easily record important parameters such as:</p>
@@ -102,7 +135,7 @@ export default function HowItWorks() {
                 <p>AquaRythu organizes water-quality records at the pond level so farmers can identify long-term changes over time instead of relying on isolated readings.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-6">
                 <h2>6. Get Farm & Environmental Intelligence</h2>
                 <p>AquaRythu goes beyond simply storing farm records.</p>
                 <p>Farm Intelligence combines your farm information with environmental signals to provide useful context for your daily decisions. Depending on available data, this includes:</p>
@@ -117,7 +150,7 @@ export default function HowItWorks() {
                 <p>The goal is to help farmers understand not only <strong>what was recorded</strong>, but also <strong>what it may mean for the crop</strong>.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-7">
                 <h2>7. Track Sampling, Growth & FCR</h2>
                 <p>Regular sampling helps farmers understand exactly how the crop is developing.</p>
                 <p>Record sampling information and accurately track:</p>
@@ -132,7 +165,7 @@ export default function HowItWorks() {
                 <p>AquaRythu turns these everyday records into crop-level growth intelligence, helping farmers understand how the crop is progressing week by week.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-8">
                 <h2>8. Work Together with Your Farm Team</h2>
                 <p>A successful shrimp farm is rarely managed by just one person.</p>
                 <p>Our farm management software supports different farm roles so the right people can access the exact information they need. Depending on their role, team members can work with:</p>
@@ -146,20 +179,20 @@ export default function HowItWorks() {
                 <p>Role-based access helps keep operational information available to the people responsible for it, while protecting your sensitive farm and financial data.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-9">
                 <h2>9. Manage Farm Expenses & Business Information</h2>
                 <p>Aquaculture farm management is not only about shrimp growth—farmers also need to understand where money is being spent.</p>
                 <p>AquaRythu brings farm financial information together with operational records so farmers can clearly understand the relationship between: <strong>Feed → Farm Costs → Crop Performance → Harvest → Revenue</strong>.</p>
                 <p>This provides a clearer, data-driven picture of your crop economics instead of keeping operational and financial information completely separate.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-10">
                 <h2>10. Manage Supplements & Farm Inputs</h2>
                 <p>Record relevant supplement and farm-input activities as part of the crop's operational history.</p>
                 <p>Keep vital input information securely connected to the pond and crop so important activities are never lost in separate paper log books or text messages.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-11">
                 <h2>11. Manage Harvest</h2>
                 <p>When the crop is ready, record the final harvest information and connect it back to the crop's history.</p>
                 <p>Track relevant harvest metrics such as:</p>
@@ -173,7 +206,7 @@ export default function HowItWorks() {
                 <p>This creates a complete, end-to-end digital history from stocking through harvest.</p>
               </div>
 
-              <div className="hiw-step-card">
+              <div className="hiw-step-card" id="step-12">
                 <h2>12. Generate Crop Reports</h2>
                 <p>Your daily shrimp farm record keeping becomes actionable, audit-ready reports.</p>
                 <p>AquaRythu automatically brings together crop information such as:</p>
