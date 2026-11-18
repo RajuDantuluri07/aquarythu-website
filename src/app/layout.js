@@ -3,17 +3,17 @@ import "./globals.css";
 import { SITE_URL, SITE_NAME, SUPPORT_EMAIL, APP_URL, pageMetadata } from "@/lib/site";
 
 const HOME_DESCRIPTION =
-  "Shrimp farm management app for Vannamei farmers in India. Record feed, trays, water quality, sampling and harvests, and get Smart Feed advice in 8 languages.";
+  "Manage shrimp ponds offline or online: track feed, check-tray logs, water quality, growth and FCR, with Smart Feed advice in 8 Indian languages.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   ...pageMetadata({
-    title: "Shrimp Farm Management App & Digital Log Book | AquaRythu",
+    title: "AquaRythu: Shrimp Farm Management App for Vannamei Farmers",
     description: HOME_DESCRIPTION,
     path: '/',
   }),
   applicationName: SITE_NAME,
-  keywords: "shrimp farm management software, aquaculture software, aqua farm management software, shrimp farm app, pond management software, shrimp farm log book, vannamei feed management app, shrimp FCR tracking",
+  keywords: "shrimp farm management app, shrimp farming app, vannamei shrimp farming software, aquaculture software, aqua farm management software, pond management software, shrimp farm log book, vannamei feed management app, shrimp FCR tracking",
 };
 
 const LANGUAGES = ["English", "Telugu", "Hindi", "Tamil", "Bengali", "Gujarati", "Malayalam", "Odia"];
