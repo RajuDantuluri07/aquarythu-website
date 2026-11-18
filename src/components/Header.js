@@ -115,7 +115,7 @@ export default function Header() {
         }
 
         .nav-links a {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 15px;
           line-height: 24px;
           font-weight: 500;
@@ -135,7 +135,7 @@ export default function Header() {
 
         .header-login {
           white-space: nowrap;
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 15px;
           font-weight: 600;
           color: #0B1B33;
@@ -149,7 +149,7 @@ export default function Header() {
         }
 
         .header-cta {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 15px;
           font-weight: 700;
           color: #ffffff;

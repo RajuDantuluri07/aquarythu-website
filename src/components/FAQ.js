@@ -123,7 +123,7 @@ export default function FAQ() {
         }
 
         .faq-header h2 {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 42px;
           line-height: 1.15;
           font-weight: 600;
@@ -133,7 +133,7 @@ export default function FAQ() {
         }
 
         .faq-header p {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 16px;
           line-height: 26px;
           font-weight: 400;

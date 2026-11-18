@@ -202,7 +202,7 @@ export default function Features() {
         }
 
         .features-header h2 {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 42px;
           line-height: 1.15;
           font-weight: 600;
@@ -212,7 +212,7 @@ export default function Features() {
         }
 
         .features-header p {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 16px;
           line-height: 26px;
           font-weight: 400;
@@ -335,7 +335,7 @@ export default function Features() {
         }
 
         .feature-title {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 18px;
           font-weight: 600;
           color: #0B1B33;
@@ -343,7 +343,7 @@ export default function Features() {
         }
 
         .feature-desc {
-          font-family: "Google Sans", sans-serif;
+          font-family: var(--font-main);
           font-size: 16px;
           font-weight: 400;
           color: #52647A;
