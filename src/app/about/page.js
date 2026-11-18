@@ -32,7 +32,7 @@ export default function About() {
         <div className="container" style={{ maxWidth: '800px' }}>
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <h1 style={{ fontSize: '3rem', fontWeight: 600, color: 'var(--color-text-main)', marginBottom: '16px', letterSpacing: '-0.01em' }}>About Us</h1>
-            <p style={{ fontSize: '1.25rem', color: 'var(--color-primary)', fontWeight: 500 }}>
+            <p style={{ fontSize: '1.25rem', color: 'var(--color-primary-strong)', fontWeight: 500 }}>
               Building the future of smart aquaculture.
             </p>
           </div>

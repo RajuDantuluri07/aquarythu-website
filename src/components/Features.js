@@ -260,7 +260,7 @@ export default function Features() {
 
         .tab-btn.active {
           background: #ffffff;
-          color: var(--color-primary);
+          color: var(--color-primary-strong);
           box-shadow: 0 2px 10px rgba(0,0,0,0.05);
           font-weight: 600;
         }
