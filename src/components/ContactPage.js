@@ -112,7 +112,7 @@ export default function ContactPage() {
           </div>
           
           <div style={{ textAlign: 'center', marginTop: '48px', color: 'var(--color-text-muted)' }}>
-            <p>Or email us directly at <a href="mailto:support@aquarythu.com" style={{ color: 'var(--color-primary)', fontWeight: 500 }}>support@aquarythu.com</a></p>
+            <p>Or email us directly at <a href="mailto:support@aquarythu.com" style={{ color: 'var(--color-primary-strong)', fontWeight: 500 }}>support@aquarythu.com</a></p>
           </div>
 
           <div style={{ marginTop: '40px', color: 'var(--color-text-muted)', lineHeight: 1.7 }}>
@@ -125,7 +125,7 @@ export default function ContactPage() {
               <li>Feedback and feature requests from your farm</li>
             </ul>
             <p style={{ marginTop: '16px' }}>
-              New to AquaRythu? Read <a href="/how-it-works" style={{ color: 'var(--color-primary)', fontWeight: 500 }}>how AquaRythu works</a> or the <a href="/#faq" style={{ color: 'var(--color-primary)', fontWeight: 500 }}>frequently asked questions</a>. To delete your account and data, see <a href="/delete-account" style={{ color: 'var(--color-primary)', fontWeight: 500 }}>account deletion</a>.
+              New to AquaRythu? Read <a href="/how-it-works" style={{ color: 'var(--color-primary-strong)', fontWeight: 500 }}>how AquaRythu works</a> or the <a href="/#faq" style={{ color: 'var(--color-primary-strong)', fontWeight: 500 }}>frequently asked questions</a>. To delete your account and data, see <a href="/delete-account" style={{ color: 'var(--color-primary-strong)', fontWeight: 500 }}>account deletion</a>.
             </p>
           </div>
         </div>

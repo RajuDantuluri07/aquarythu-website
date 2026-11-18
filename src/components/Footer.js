@@ -49,7 +49,7 @@ export default function Footer() {
       </div>
       <style>{`
         .footer {
-          background-color: var(--color-primary);
+          background-color: var(--color-primary-strong);
           padding: 48px 0 24px;
           border-top: 1px solid rgba(255,255,255,0.1);
         }
@@ -63,7 +63,7 @@ export default function Footer() {
         }
 
         .footer-brand p {
-          color: rgba(255, 255, 255, 0.9);
+          color: rgba(255, 255, 255, 0.95);
         }
 
         .footer-links {
@@ -79,19 +79,19 @@ export default function Footer() {
 
         .link-group a {
           display: block;
-          color: rgba(255, 255, 255, 0.8);
+          color: #ffffff;
           margin-bottom: 8px;
-          transition: color 0.2s ease, opacity 0.2s ease;
+          text-underline-offset: 3px;
         }
 
-        .link-group a:hover {
-          color: #ffffff;
-          opacity: 1;
+        .link-group a:hover,
+        .link-group a:focus-visible {
+          text-decoration: underline;
         }
 
         .footer-bottom {
           text-align: center;
-          color: rgba(255, 255, 255, 0.7);
+          color: rgba(255, 255, 255, 0.95);
           font-size: 0.85rem;
           padding-top: 24px;
           border-top: 1px solid rgba(255,255,255,0.2);

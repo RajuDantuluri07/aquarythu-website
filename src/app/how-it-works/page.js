@@ -261,7 +261,7 @@ export default function HowItWorks() {
         }
 
         .breadcrumb-item a {
-          color: var(--color-primary);
+          color: var(--color-primary-strong);
           text-decoration: none;
         }
 
@@ -297,7 +297,7 @@ export default function HowItWorks() {
           font-size: 18px;
           line-height: 28px;
           font-weight: 400;
-          color: #017FE3;
+          color: var(--color-primary-strong);
           margin-bottom: 20px;
         }
 
@@ -410,7 +410,7 @@ export default function HowItWorks() {
           font-family: var(--font-main);
           font-size: 18px;
           font-weight: 600;
-          color: #017FE3;
+          color: var(--color-primary-strong);
           margin-bottom: 8px;
         }
 

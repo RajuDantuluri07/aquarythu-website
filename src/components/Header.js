@@ -153,7 +153,7 @@ export default function Header() {
           font-size: 15px;
           font-weight: 700;
           color: #ffffff;
-          background: #017FE3;
+          background: var(--color-primary-strong);
           padding: 10px 18px;
           border-radius: 10px;
           white-space: nowrap;

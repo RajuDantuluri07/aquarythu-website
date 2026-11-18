@@ -4,6 +4,9 @@
   --color-bg-card: #ffffff;
   --color-primary: #017FE3;
   --color-primary-hover: #006bc2;
+  /* Brand blue a shade deeper for normal-size text: white on it is 4.9:1
+     (WCAG AA 4.5:1). #017FE3 + white is only 4.1:1, fine for large text. */
+  --color-primary-strong: #0072cc;
   --color-secondary: #003366;
   --color-success: #28A745;
   --color-text-main: #0B1B33;
@@ -68,7 +71,7 @@ a {
 .btn-primary {
   display: inline-block;
   padding: 14px 28px;
-  background-color: var(--color-primary);
+  background-color: var(--color-primary-strong);
   color: #fff;
   font-family: var(--font-main);
   font-weight: 700;
@@ -88,11 +91,11 @@ a {
   display: inline-block;
   padding: 14px 28px;
   background: transparent;
-  color: var(--color-primary);
+  color: var(--color-primary-strong);
   font-family: var(--font-main);
   font-weight: 700;
   border-radius: 10px;
-  border: 1px solid var(--color-primary);
+  border: 1px solid var(--color-primary-strong);
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 16px;
