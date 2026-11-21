@@ -18,8 +18,20 @@ export default function Hero() {
             Manage ponds, feed, water quality, sampling, harvests and farm records — all in one app.
           </p>
           <div className="hero-cta-group">
-            <a href="https://app.aquarythu.com/" className="btn-primary">Start free trial</a>
-            <a href="https://app.aquarythu.com/login" className="btn-secondary">Log in</a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.aquarythu.app&hl=en_IN"
+              className="play-store-badge-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/google-play-badge.png"
+                alt="Get it on Google Play"
+                width={216}
+                height={64}
+                className="play-store-badge"
+              />
+            </a>
           </div>
         </div>
         
@@ -154,6 +166,22 @@ export default function Hero() {
           margin-top: 28px;
         }
 
+        .play-store-badge-link {
+          display: inline-flex;
+          transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .play-store-badge-link:hover {
+          transform: translateY(-2px);
+          opacity: 0.9;
+        }
+
+        .play-store-badge {
+          height: 64px;
+          width: auto;
+          display: block;
+        }
+
 
 
         .hero-visual {
@@ -278,17 +306,12 @@ export default function Hero() {
             margin-top: 26px;
             gap: 12px;
           }
-          .hero-cta-group a {
-            width: 100%;
-            text-align: center;
-            min-height: 56px;
-            border-radius: 12px;
-            font-size: 18px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
+          .play-store-badge-link {
             justify-content: center;
-            box-sizing: border-box;
+          }
+
+          .play-store-badge {
+            height: 56px;
           }
           .hero-visual {
             padding: 0;
